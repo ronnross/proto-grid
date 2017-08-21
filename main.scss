@@ -1,0 +1,43 @@
+/* Base */
+.b1 { border: 1px solid yellow }
+.list-style-none { list-style-type: none }
+.display-block { display: block }
+.m0 { margin: 0 }
+.p-none { padding: 0 }
+.fl { float: left }
+.fs1 { font-size: 1.2em }
+
+/* Grid */
+.grid { display: grid }
+.of-1-cols { grid-template-columns: 1fr }
+.of-12-cols { grid-template-columns: repeat(12, 1fr) }
+
+.row-span-2 { grid-row: span 2 }
+
+.span-0 { display: none }
+/* 
+ creates a .span-12 { grid-column: span 12 }
+ from 1 to 12
+*/
+@for $i from 1 through 12 {
+  .span-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+/* sizes */
+.hide-sm { display: none }
+.hide-md { display: initial }
+.span-0-md { display: initial }
+
+.hide-sm { display: none }
+
+@media (min-width: 600px) {
+  .of-12-cols-md {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .span-2-md { grid-column: span 2 }
+  .span-10-md { grid-column: span 10 }
+  .span-0 { display: initial }
+  .span-0-md { display: none }
+}

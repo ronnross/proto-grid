@@ -1,0 +1,16 @@
+.DS_Store
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+*.iml
+.idea
+dist/
+lib/
+public/
+old_lib
+
+package-lock.json
+yarn.lock
