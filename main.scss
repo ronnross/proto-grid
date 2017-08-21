@@ -1,5 +1,11 @@
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$grid-start: 1;
+$grid-end: 12;
+
 /* Base */
-.b1 { border: 1px solid yellow }
+.b1 { border: 1px solid red }
 .list-style-none { list-style-type: none }
 .display-block { display: block }
 .m0 { margin: 0 }
@@ -19,7 +25,7 @@
  creates a .span-12 { grid-column: span 12 }
  from 1 to 12
 */
-@for $i from 1 through 12 {
+@for $i from $grid-start through $grid-end {
   .span-#{$i} {
     grid-column: span #{$i};
   }
@@ -30,14 +36,17 @@
 .hide-md { display: initial }
 .span-0-md { display: initial }
 
-.hide-sm { display: none }
-
-@media (min-width: 600px) {
-  .of-12-cols-md {
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .span-2-md { grid-column: span 2 }
-  .span-10-md { grid-column: span 10 }
+@media (min-width: $breakpoint-tablet) {
+  .of-12-cols-md { grid-template-columns: repeat($grid-end, 1fr) }
   .span-0 { display: initial }
   .span-0-md { display: none }
+  /*
+  Creates a .span-2-md { grid-column: span 2 }
+  from 1 to 12
+  */
+  @for $i from $grid-start through $grid-end {
+    .span-#{$i}-md {
+      grid-column: span #{$i};
+    }
+  }
 }
