@@ -26,6 +26,7 @@ $grid-end: 12;
 .of-12-cols { grid-template-columns: repeat(12, 1fr) }
 
 .row-span-2 { grid-row: span 2 }
+.row-stretch { grid-template-rows: 100vh }
 
 .span-0 { display: none }
 /* 
@@ -44,7 +45,6 @@ $grid-end: 12;
 .span-0-md { display: initial }
 
 @include breakpoint(tablet) {
-  .of-12-cols-md { grid-template-columns: repeat($grid-end, 1fr) }
   .span-0 { display: initial }
   .span-0-md { display: none }
   /*
