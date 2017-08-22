@@ -1,10 +1,17 @@
-$breakpoint-mobile: 576px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 992px;
 $grid-start: 1;
 $grid-end: 12;
 
-/* Base */
+/************** Mixins *************/
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (min-width: 50rem) { @content ; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 70rem) { @content ; }
+  }
+}
+
+/************** Base *************/
 .b1 { border: 1px solid red }
 .list-style-none { list-style-type: none }
 .display-block { display: block }
@@ -13,7 +20,7 @@ $grid-end: 12;
 .fl { float: left }
 .fs1 { font-size: 1.2em }
 
-/* Grid */
+/************** Grid *************/
 .grid { display: grid }
 .of-1-cols { grid-template-columns: 1fr }
 .of-12-cols { grid-template-columns: repeat(12, 1fr) }
@@ -36,7 +43,7 @@ $grid-end: 12;
 .hide-md { display: initial }
 .span-0-md { display: initial }
 
-@media (min-width: $breakpoint-tablet) {
+@include breakpoint(tablet) {
   .of-12-cols-md { grid-template-columns: repeat($grid-end, 1fr) }
   .span-0 { display: initial }
   .span-0-md { display: none }
