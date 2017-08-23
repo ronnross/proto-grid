@@ -36,7 +36,9 @@ $grid-end: 12;
   }
 }
 
+/* sizes */
 
+/* Mobile */
 .span-0 { display: none }
 /* 
  creates a .span-12 { grid-column: span 12 }
@@ -45,14 +47,12 @@ $grid-end: 12;
 @for $i from $grid-start through $grid-end {
   .span-#{$i} {
     grid-column: span #{$i};
+    display: initial;
   }
 }
 
-/* sizes */
-.span-0-md { display: initial }
-
+/* Tablet */
 @include breakpoint(tablet) {
-  .span-0 { display: initial }
   .span-0-md { display: none }
   /*
   Creates a .span-2-md { grid-column: span 2 }
@@ -61,6 +61,22 @@ $grid-end: 12;
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-md {
       grid-column: span #{$i};
+      display: initial;
+    }
+  }
+}
+
+/* Desktop */
+@include breakpoint(desktop) {
+  .span-0-lg { display: none }
+  /*
+  Creates a .span-2-lg { grid-column: span 2 }
+  from 1 to 12
+  */
+  @for $i from $grid-start through $grid-end {
+    .span-#{$i}-lg {
+      grid-column: span #{$i};
+      display: initial;
     }
   }
 }
