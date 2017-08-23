@@ -16,17 +16,26 @@ $grid-end: 12;
 .list-style-none { list-style-type: none }
 .display-block { display: block }
 .m0 { margin: 0 }
+.m-auto { margin: auto }
 .p-none { padding: 0 }
 .fl { float: left }
 .fs1 { font-size: 1.2em }
 
 /************** Grid *************/
 .grid { display: grid }
-.of-1-cols { grid-template-columns: 1fr }
 .of-12-cols { grid-template-columns: repeat(12, 1fr) }
 
-.row-span-2 { grid-row: span 2 }
-.row-stretch { grid-template-rows: 100vh }
+.row-span-0 { display: none }
+/* 
+ creates a row-span-2 { grid-row: span 2 }
+ from 1 to 12
+*/
+@for $i from $grid-start through $grid-end {
+  .row-span-#{$i} {
+    grid-row: span #{$i};
+  }
+}
+
 
 .span-0 { display: none }
 /* 
@@ -40,8 +49,6 @@ $grid-end: 12;
 }
 
 /* sizes */
-.hide-sm { display: none }
-.hide-md { display: initial }
 .span-0-md { display: initial }
 
 @include breakpoint(tablet) {
