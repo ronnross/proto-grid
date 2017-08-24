@@ -8,7 +8,6 @@ node_modules
 *.iml
 .idea
 dist/
-lib/
 public/
 old_lib
 
