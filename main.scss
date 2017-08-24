@@ -1,6 +1,2 @@
 @import "base";
-
-@supports (display: grid) {
-  @import "grid";
-}
-@import "flex-grid";
+@import "grid";

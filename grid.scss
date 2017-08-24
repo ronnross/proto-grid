@@ -4,17 +4,28 @@ $grid-end: 12;
 /************** Mixins *************/
 @mixin breakpoint($point) {
   @if $point == tablet {
-    @media (min-width: 50rem) { @content ; }
-  }
-  @else if $point == desktop {
-    @media (min-width: 70rem) { @content ; }
+    @media (min-width: 50rem) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (min-width: 70rem) {
+      @content;
+    }
   }
 }
 
-.grid { display: grid }
-.of-12-cols { grid-template-columns: repeat(12, 1fr) }
+.grid {
+  display: grid;
+  display: -ms-grid;
+}
+.of-12-cols {
+  grid-template-columns: repeat(12, 1fr);
+  -ms-grid-template-columns: repeat(12, 1fr);
+}
 
-.row-span-0 { display: none }
+.row-span-0 {
+  display: none;
+}
 /* 
  creates a row-span-2 { grid-row: span 2 }
  from 1 to 12
@@ -22,13 +33,16 @@ $grid-end: 12;
 @for $i from $grid-start through $grid-end {
   .row-span-#{$i} {
     grid-row: span #{$i};
+    -ms-grid-row-span: #{$i};
   }
 }
 
 /* sizes */
 
 /* Mobile */
-.span-0 { display: none }
+.span-0 {
+  display: none;
+}
 /* 
  creates a .span-12 { grid-column: span 12 }
  from 1 to 12
@@ -36,13 +50,16 @@ $grid-end: 12;
 @for $i from $grid-start through $grid-end {
   .span-#{$i} {
     grid-column: span #{$i};
+    -ms-grid-column-span: #{$i};
     display: initial;
   }
 }
 
 /* Tablet */
 @include breakpoint(tablet) {
-  .span-0-md { display: none }
+  .span-0-md {
+    display: none;
+  }
   /*
   Creates a .span-2-md { grid-column: span 2 }
   from 1 to 12
@@ -50,6 +67,7 @@ $grid-end: 12;
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-md {
       grid-column: span #{$i};
+      -ms-grid-column-span: #{$i};
       display: initial;
     }
   }
@@ -57,7 +75,9 @@ $grid-end: 12;
 
 /* Desktop */
 @include breakpoint(desktop) {
-  .span-0-lg { display: none }
+  .span-0-lg {
+    display: none;
+  }
   /*
   Creates a .span-2-lg { grid-column: span 2 }
   from 1 to 12
@@ -65,6 +85,7 @@ $grid-end: 12;
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-lg {
       grid-column: span #{$i};
+      -ms-grid-column-span: #{$i};
       display: initial;
     }
   }
