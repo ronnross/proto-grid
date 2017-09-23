@@ -1,3 +1,4 @@
+* { box-sizing: border-box }
 $grid-start: 1;
 $grid-end: 12;
 /************** Mixins *************/
@@ -19,16 +20,28 @@ $grid-end: 12;
   display: table;
 }
 
-.span-0 { display: none }
+.gap-1 * + * { 
+  margin-left: 20px 
+} 
+
+
+.span-0 {
+  display: none;
+}
 
 @for $i from $grid-start through $grid-end {
   .span-#{$i} {
     float: left;
-    width:  calc(100% / #{ $grid-end  - ($i - 1) });
+    width: calc(100% * #{ $i / $grid-end });
     display: initial;
   }
 }
 
+@for $i from $grid-start through $grid-end {
+  .gap-1 > .span-#{$i} {
+    width: calc((100% * #{ $i / $grid-end } - 20px) + (1 * #{ $i / $grid-end } * 20px));
+  }
+}
 
 /* Tablet */
 @include breakpoint(tablet) {
@@ -39,11 +52,10 @@ $grid-end: 12;
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-md {
       float: left;
-      width:  calc(100% / #{ $grid-end  - ($i - 1) });
+      width: calc((100% * #{ $i / $grid-end } - 20px) + (1 * #{ $i / $grid-end } * 20px));
       display: initial;
     }
   }
-  
 }
 
 /* Desktop */
@@ -55,7 +67,7 @@ $grid-end: 12;
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-lg {
       float: left;
-      width:  calc(100% / #{ $grid-end  - ($i - 1) });
+      width: calc((100% * #{ $i / $grid-end } - 20px) + (1 * #{ $i / $grid-end } * 20px));
       display: initial;
     }
   }
