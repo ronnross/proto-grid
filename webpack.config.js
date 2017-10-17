@@ -4,7 +4,7 @@ const fromProject = path => resolvePath(__dirname, path);
 
 module.exports = {
   entry: {
-    main: fromProject("index.js")
+    main: fromProject("src/index.js")
   },
   output: {
     path: fromProject("lib"),
@@ -28,7 +28,7 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["babel-preset-es2015"]
+              presets: ["babel-preset-env"]
             }
           }
         ]

@@ -15,26 +15,22 @@ $grid-end: 12;
 
 .grid {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: repeat(12, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.gap-1 { grid-column-gap: 20px } 
 
-
-.row-span-0 {
-  display: none;
-}
 /* 
- creates a row-span-2 { grid-row: span 2 }
+ creates a .ms-col-1 { -ms-grid-column: 1 }
  from 1 to 12
 */
 @for $i from $grid-start through $grid-end {
-  .row-span-#{$i} {
-    grid-row: span #{$i};
+  .ms-col-#{$i} {
+    -ms-grid-column: #{$i};
   }
 }
 
 /* sizes */
-
 /* Mobile */
 .span-0 {
   display: none;
@@ -46,8 +42,32 @@ $grid-end: 12;
 @for $i from $grid-start through $grid-end {
   .span-#{$i} {
     grid-column: span #{$i};
+    -ms-grid-column-span: #{$i};
     display: initial;
   }
+}
+
+/* 
+ creates a row-span-2 { grid-row: span 2 }
+ from 1 to 12
+*/
+@for $i from $grid-start through $grid-end {
+  .row-span-#{$i} {
+    grid-row: span #{$i};
+    -ms-grid-column-span: #{$i};
+  }
+}
+
+.gap-1 {
+  grid-column-gap: 15px;
+}
+
+.gap-2 {
+  grid-column-gap: 20px;
+}
+
+.row-span-0 {
+  display: none;
 }
 
 /* Tablet */
@@ -62,6 +82,7 @@ $grid-end: 12;
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-md {
       grid-column: span #{$i};
+      -ms-grid-column-span: #{$i};
       display: initial;
     }
   }
@@ -79,6 +100,7 @@ $grid-end: 12;
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-lg {
       grid-column: span #{$i};
+      -ms-grid-column-span: #{$i};
       display: initial;
     }
   }

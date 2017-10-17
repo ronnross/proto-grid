@@ -1,10 +1,10 @@
 # proto-grid
 
 for development 
-`npm i`
+`yarn`
 
 Then start webpack to build bundle 
-`npm run build:watch`
+`yarn build:watch`
 
 Finally, serve it. 
-`npm start`
+`yarn start`
