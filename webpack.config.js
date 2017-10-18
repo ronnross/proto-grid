@@ -1,6 +1,9 @@
 const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const { resolve: resolvePath, relative: pathRelative } = require("path");
 const fromProject = path => resolvePath(__dirname, path);
+
+const cssPlugins = [new ExtractTextPlugin("grid.css")];
 
 module.exports = {
   entry: {
@@ -15,11 +18,16 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: [
-          { loader: "style-loader" },
-          { loader: "css-loader", options: { sourceMap: true } },
-          { loader: "sass-loader", options: { sourceMap: true } }
-        ]
+        exclude: [/node_modules/],
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: "css-loader",
+              options: { sourceMap: true }
+            },
+            "sass-loader"
+          ]
+        })
       },
       {
         test: /\.js$/,
@@ -34,5 +42,6 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [...cssPlugins]
 };
