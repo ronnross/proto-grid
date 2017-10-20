@@ -37,10 +37,19 @@ function runTest(conditions) {
         const el = elements[i];
         const ex = expected[i];
 
-        const found = el.classNames.includes(`ms-col-${ex.colStart}`);
-        console.log('checking ', el.classNames, ' for ', `ms-col-${ex.colStart}`)
-        console.log('ex', found);
-        expect(found).toBeTruthy();
+        try {
+            // check column start
+            if (ex.colStart) {
+                expect(el.classNames.includes(`ms-col-${ex.colStart}`)).toBeTruthy();
+            }
+            // console.log('checking ', el.classNames, ' for ', `ms-row-${ex.rowStart}`)
+            if (ex.rowStart) {
+                expect(el.classNames.includes(`ms-row-${ex.rowStart}`)).toBeTruthy();
+            }
+        } catch (e) {
+            console.log(ex, ' didn\t match ', el.classNames);
+            throw e;
+        }
     }
 }
 
@@ -68,6 +77,34 @@ describe('polyfill', () => {
             [new GridElement({ colSpan: 4 }), { colStart: 1, rowStart: 1 }],
             [new GridElement({ colSpan: 6 }), { colStart: 5, rowStart: 1 }],
             [new GridElement({ colSpan: 2 }), { colStart: 11, rowStart: 1 }],
+        ];
+        runTest(allDefaults);
+    });
+
+    it('should bump elements down to the next row if the current row is filled', () => {
+        const allDefaults = [
+            [new GridElement({ colSpan: 6 }), { colStart: 1, rowStart: 1 }],
+            [new GridElement({ colSpan: 6 }), { colStart: 7, rowStart: 1 }],
+            [new GridElement({ colSpan: 6 }), { colStart: 1, rowStart: 2 }],
+        ];
+        runTest(allDefaults);
+    });
+
+    it('should bump elements down to the next row if they don\'t fit', () => {
+        const allDefaults = [
+            [new GridElement({ colSpan: 4 }), { colStart: 1, rowStart: 1 }],
+            [new GridElement({ colSpan: 4 }), { colStart: 5, rowStart: 1 }],
+            [new GridElement({ colSpan: 6 }), { colStart: 1, rowStart: 2 }],
+        ];
+        runTest(allDefaults);
+    });
+
+    it('should\'nt count display: none elements', () => {
+        const allDefaults = [
+            [new GridElement({ colSpan: 4, display: 'none' }), { }],
+            [new GridElement({ colSpan: 4 }),                  { colStart: 1, rowStart: 1 }],
+            [new GridElement({ colSpan: 4,  }),                { colStart: 5, rowStart: 1 }],
+            [new GridElement({ colSpan: 6 }),                  { colStart: 1, rowStart: 2 }],
         ];
         runTest(allDefaults);
     });
