@@ -26,13 +26,13 @@ $grid-end: 12;
 */
 @for $i from $grid-start through $grid-end {
   .ms-col-#{$i} {
-    -ms-grid-row: #{$i};
+    -ms-grid-column: #{$i};
   }
 }
 
 @for $i from 1 through 20 {
   .ms-row-#{$i} {
-    -ms-grid-column: #{$i};
+    -ms-grid-row: #{$i};
   }
 }
 
