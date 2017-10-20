@@ -1,4 +1,5 @@
 let polyfill = function() {
+  console.log("grid is running");
   function indexInc(a) {
     return a + 1;
   }

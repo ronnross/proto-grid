@@ -1,2 +1,4 @@
-import * as grid from "./grid-poly";
+import grid from "./grid-poly";
 import "./main.scss";
+
+grid();
