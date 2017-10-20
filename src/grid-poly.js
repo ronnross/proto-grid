@@ -1,4 +1,5 @@
-let polyfill = function () {
+let polyfill = function() {
+  console.log("grid is running");
   function indexInc(a) {
     return a + 1;
   }
@@ -20,18 +21,16 @@ let polyfill = function () {
 
       let span = parseInt(s.msGridColumnSpan) || 1;
       let start = currCol + span > 12 ? 0 : currCol;
-
       if (start === 0) {
         currRow++;
       }
 
-      // console.  log({ span: span, start: start, currCol: currCol });
+      console.log({ span: span, start: start, currCol: currCol });
       gi.classList.add("ms-col-" + (start + 1));
       gi.classList.add("ms-row-" + currRow);
       currCol = start + span;
     }
   });
 };
-
 
 module.exports = polyfill;
