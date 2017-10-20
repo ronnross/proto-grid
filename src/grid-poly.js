@@ -29,7 +29,7 @@
       //let list = el.children[i].classList;
       //let span = calculateColSpan(list);
       let start = currCol + span > 12 ? 0 : currCol;
-      log({ span: span, start: start, currCol: currCol });
+      console.log({ span: span, start: start, currCol: currCol });
       gi.classList.add("ms-col-" + (start + 1));
       currCol = start + span;
     }
