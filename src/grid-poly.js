@@ -1,4 +1,4 @@
-let polyfill = function () {
+let polyfill = function() {
   function indexInc(a) {
     return a + 1;
   }
@@ -15,7 +15,7 @@ let polyfill = function () {
     for (let i = 0; i < childArray.length; i++) {
       const gi = el.children[i];
       let s = window.getComputedStyle(gi);
-      console.log('s', s);
+      console.log("s", s);
       if (s.display === "none") continue;
 
       let span = parseInt(s.msGridColumnSpan) || 1;
@@ -23,12 +23,11 @@ let polyfill = function () {
       //let list = el.children[i].classList;
       //let span = calculateColSpan(list);
       let start = currCol + span > 12 ? 0 : currCol;
-      console.  log({ span: span, start: start, currCol: currCol });
+      console.log({ span: span, start: start, currCol: currCol });
       gi.classList.add("ms-col-" + (start + 1));
       currCol = start + span;
     }
   });
 };
-
 
 module.exports = polyfill;
