@@ -27,28 +27,28 @@ html {
 
 /* External Library Includes
 * Add normaize at the end */
-:root {
-  /* All */
-  --white: hsl(0, 100%, 100%);
-  --black: hsl(0, 0, 0);
-  /* Kroger */
-  --primary-light: hsl(220, 50%, 95%); /* blue1 */
-  --primary: hsl(205, 100%, 35%); /* blue2 */
-  --primary-dark: hsl(203, 93%, 24%); /* blue3 */
-  --secondary-darkest: hsl(0, 0%, 25%); /* gray1 */
-  --secondary-dark: hsl(240, 2%, 35%); /* gray2 */
-  --secondary: hsl(0, 0%, 67%); /* gray3 */
-  --secondary-light: hsl(0, 0%, 85%); /* gray4 */
-  --secondary-lightest: hsl(210, 4%, 91%); /* gray5 */
-  --tertiary: hsl(257, 48%, 53%); /* purple1 */
+// :root {
+/* All */
+$white: hsl(0, 100%, 100%);
+$black: hsl(0, 0, 0);
+/* Kroger */
+$primary-light: hsl(220, 50%, 95%); /* blue1 */
+$primary: hsl(205, 100%, 35%); /* blue2 */
+$primary-dark: hsl(203, 93%, 24%); /* blue3 */
+$secondary-darkest: hsl(0, 0%, 25%); /* gray1 */
+$secondary-dark: hsl(240, 2%, 35%); /* gray2 */
+$secondary: hsl(0, 0%, 67%); /* gray3 */
+$secondary-light: hsl(0, 0%, 85%); /* gray4 */
+$secondary-lightest: hsl(210, 4%, 91%); /* gray5 */
+$tertiary: hsl(257, 48%, 53%); /* purple1 */
 
-  /* Ralphs
+/* Ralphs
   --yellow1: hsl(50, 84%, 52%);
   --red1: hsl(2, 97%, 43%);
   --green1: hsl(147, 86%, 28%);
   --green2: hsl(147, 33%, 76%);
   */
-}
+// }
 
 /* Colors */
 .gray-fade-bg {
@@ -56,96 +56,96 @@ html {
 }
 
 .white {
-  color: var(--white);
+  color: $white;
 }
 .primary-light {
-  color: var(--primary-light);
+  color: $primary-light;
 }
 .primary {
-  color: var(--primary);
+  color: $primary;
 }
 .primary-dark {
-  color: var(--primary-dark);
+  color: $primary-dark;
 }
 .secondary-lightest {
-  color: var(--secondary-lightest);
+  color: $secondary-lightest;
 }
 .secondary-light {
-  color: var(--secondary-light);
+  color: $secondary-light;
 }
 .secondary {
-  color: var(--secondary);
+  color: $secondary;
 }
 .secondary-dark {
-  color: var(--secondary-dark);
+  color: $secondary-dark;
 }
 .secondary-darkest {
-  color: var(--secondary-darkest);
+  color: $secondary-darkest;
 }
 .tertiary {
-  color: var(--tertiary);
+  color: $tertiary;
 }
 
 .white-bg {
-  background-color: var(--white);
+  background-color: $white;
 }
 .primary-light-bg {
-  background-color: var(--primary-light);
+  background-color: $primary-light;
 }
 .primary-bg {
-  background-color: var(--primary);
+  background-color: $primary;
 }
 .primary-dark-bg {
-  background-color: var(--primary-dark);
+  background-color: $primary-dark;
 }
 .secondary-lightest-bg {
-  background-color: var(--secondary-lightest);
+  background-color: $secondary-lightest;
 }
 .secondary-light-bg {
-  background-color: var(--secondary-light);
+  background-color: $secondary-light;
 }
 .secondary-bg {
-  background-color: var(--secondary);
+  background-color: $secondary;
 }
 .secondary-dark-bg {
-  background-color: var(--secondary-dark);
+  background-color: $secondary-dark;
 }
 .secondary-darkest-bg {
-  background-color: var(--secondary-darkest);
+  background-color: $secondary-darkest;
 }
 .tertiary-bg {
-  background-color: var(--tertiary);
+  background-color: $tertiary;
 }
 
 .white-b {
-  border-color: var(--white);
+  border-color: $white;
 }
 .primary-light-b {
-  border-color: var(--primary-light);
+  border-color: $primary-light;
 }
 .primary-b {
-  border-color: var(--primary);
+  border-color: $primary;
 }
 .primary-dark-b {
-  border-color: var(--primary-dark);
+  border-color: $primary-dark;
 }
 .secondary-lightest-b {
-  border-color: var(--secondary-lightest);
+  border-color: $secondary-lightest;
 }
 .secondary-light-b {
-  border-color: var(--secondary-light);
+  border-color: $secondary-light;
 }
 .secondary-b {
-  border-color: var(--secondary);
+  border-color: $secondary;
 }
 .secondary-dark-b {
-  border-color: var(--secondary-dark);
+  border-color: $secondary-dark;
 }
 .secondary-darkest-b {
-  border-color: var(--secondary-darkest);
+  border-color: $secondary-darkest;
 }
 .tertiary-b {
-  border-color: var(--tertiary);
+  border-color: $tertiary;
 }
 
 /*///////// BORDER \\\\\\\\\
