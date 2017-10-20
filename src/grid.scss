@@ -14,10 +14,10 @@ $grid-end: 12;
 }
 
 .grid {
-  display: grid;
   display: -ms-grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 /* 
@@ -41,8 +41,8 @@ $grid-end: 12;
 */
 @for $i from $grid-start through $grid-end {
   .span-#{$i} {
-    grid-column: span #{$i};
     -ms-grid-column-span: #{$i};
+    grid-column: span #{$i};
     display: initial;
   }
 }
@@ -53,8 +53,8 @@ $grid-end: 12;
 */
 @for $i from $grid-start through $grid-end {
   .row-span-#{$i} {
-    grid-row: span #{$i};
     -ms-grid-column-span: #{$i};
+    grid-row: span #{$i};
   }
 }
 
@@ -81,8 +81,8 @@ $grid-end: 12;
   */
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-md {
-      grid-column: span #{$i};
       -ms-grid-column-span: #{$i};
+      grid-column: span #{$i};
       display: initial;
     }
   }
@@ -99,8 +99,8 @@ $grid-end: 12;
   */
   @for $i from $grid-start through $grid-end {
     .span-#{$i}-lg {
-      grid-column: span #{$i};
       -ms-grid-column-span: #{$i};
+      grid-column: span #{$i};
       display: initial;
     }
   }
