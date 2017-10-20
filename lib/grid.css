@@ -450,10 +450,10 @@ template {
 }
 /************** Mixins *************/
 .grid {
-  display: grid;
   display: -ms-grid;
-  grid-template-columns: repeat(12, 1fr);
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr); }
 
 /* 
  creates a .ms-col-1 { -ms-grid-column: 1 }
@@ -505,63 +505,63 @@ template {
  from 1 to 12
 */
 .span-1 {
-  grid-column: span 1;
   -ms-grid-column-span: 1;
+  grid-column: span 1;
   display: initial; }
 
 .span-2 {
-  grid-column: span 2;
   -ms-grid-column-span: 2;
+  grid-column: span 2;
   display: initial; }
 
 .span-3 {
-  grid-column: span 3;
   -ms-grid-column-span: 3;
+  grid-column: span 3;
   display: initial; }
 
 .span-4 {
-  grid-column: span 4;
   -ms-grid-column-span: 4;
+  grid-column: span 4;
   display: initial; }
 
 .span-5 {
-  grid-column: span 5;
   -ms-grid-column-span: 5;
+  grid-column: span 5;
   display: initial; }
 
 .span-6 {
-  grid-column: span 6;
   -ms-grid-column-span: 6;
+  grid-column: span 6;
   display: initial; }
 
 .span-7 {
-  grid-column: span 7;
   -ms-grid-column-span: 7;
+  grid-column: span 7;
   display: initial; }
 
 .span-8 {
-  grid-column: span 8;
   -ms-grid-column-span: 8;
+  grid-column: span 8;
   display: initial; }
 
 .span-9 {
-  grid-column: span 9;
   -ms-grid-column-span: 9;
+  grid-column: span 9;
   display: initial; }
 
 .span-10 {
-  grid-column: span 10;
   -ms-grid-column-span: 10;
+  grid-column: span 10;
   display: initial; }
 
 .span-11 {
-  grid-column: span 11;
   -ms-grid-column-span: 11;
+  grid-column: span 11;
   display: initial; }
 
 .span-12 {
-  grid-column: span 12;
   -ms-grid-column-span: 12;
+  grid-column: span 12;
   display: initial; }
 
 /* 
@@ -569,52 +569,52 @@ template {
  from 1 to 12
 */
 .row-span-1 {
-  grid-row: span 1;
-  -ms-grid-column-span: 1; }
+  -ms-grid-column-span: 1;
+  grid-row: span 1; }
 
 .row-span-2 {
-  grid-row: span 2;
-  -ms-grid-column-span: 2; }
+  -ms-grid-column-span: 2;
+  grid-row: span 2; }
 
 .row-span-3 {
-  grid-row: span 3;
-  -ms-grid-column-span: 3; }
+  -ms-grid-column-span: 3;
+  grid-row: span 3; }
 
 .row-span-4 {
-  grid-row: span 4;
-  -ms-grid-column-span: 4; }
+  -ms-grid-column-span: 4;
+  grid-row: span 4; }
 
 .row-span-5 {
-  grid-row: span 5;
-  -ms-grid-column-span: 5; }
+  -ms-grid-column-span: 5;
+  grid-row: span 5; }
 
 .row-span-6 {
-  grid-row: span 6;
-  -ms-grid-column-span: 6; }
+  -ms-grid-column-span: 6;
+  grid-row: span 6; }
 
 .row-span-7 {
-  grid-row: span 7;
-  -ms-grid-column-span: 7; }
+  -ms-grid-column-span: 7;
+  grid-row: span 7; }
 
 .row-span-8 {
-  grid-row: span 8;
-  -ms-grid-column-span: 8; }
+  -ms-grid-column-span: 8;
+  grid-row: span 8; }
 
 .row-span-9 {
-  grid-row: span 9;
-  -ms-grid-column-span: 9; }
+  -ms-grid-column-span: 9;
+  grid-row: span 9; }
 
 .row-span-10 {
-  grid-row: span 10;
-  -ms-grid-column-span: 10; }
+  -ms-grid-column-span: 10;
+  grid-row: span 10; }
 
 .row-span-11 {
-  grid-row: span 11;
-  -ms-grid-column-span: 11; }
+  -ms-grid-column-span: 11;
+  grid-row: span 11; }
 
 .row-span-12 {
-  grid-row: span 12;
-  -ms-grid-column-span: 12; }
+  -ms-grid-column-span: 12;
+  grid-row: span 12; }
 
 .gap-1 {
   grid-column-gap: 15px; }
@@ -634,52 +634,52 @@ template {
   from 1 to 12
   */
   .span-1-md {
-    grid-column: span 1;
     -ms-grid-column-span: 1;
+    grid-column: span 1;
     display: initial; }
   .span-2-md {
-    grid-column: span 2;
     -ms-grid-column-span: 2;
+    grid-column: span 2;
     display: initial; }
   .span-3-md {
-    grid-column: span 3;
     -ms-grid-column-span: 3;
+    grid-column: span 3;
     display: initial; }
   .span-4-md {
-    grid-column: span 4;
     -ms-grid-column-span: 4;
+    grid-column: span 4;
     display: initial; }
   .span-5-md {
-    grid-column: span 5;
     -ms-grid-column-span: 5;
+    grid-column: span 5;
     display: initial; }
   .span-6-md {
-    grid-column: span 6;
     -ms-grid-column-span: 6;
+    grid-column: span 6;
     display: initial; }
   .span-7-md {
-    grid-column: span 7;
     -ms-grid-column-span: 7;
+    grid-column: span 7;
     display: initial; }
   .span-8-md {
-    grid-column: span 8;
     -ms-grid-column-span: 8;
+    grid-column: span 8;
     display: initial; }
   .span-9-md {
-    grid-column: span 9;
     -ms-grid-column-span: 9;
+    grid-column: span 9;
     display: initial; }
   .span-10-md {
-    grid-column: span 10;
     -ms-grid-column-span: 10;
+    grid-column: span 10;
     display: initial; }
   .span-11-md {
-    grid-column: span 11;
     -ms-grid-column-span: 11;
+    grid-column: span 11;
     display: initial; }
   .span-12-md {
-    grid-column: span 12;
     -ms-grid-column-span: 12;
+    grid-column: span 12;
     display: initial; } }
 
 /* Desktop */
@@ -691,52 +691,52 @@ template {
   from 1 to 12
   */
   .span-1-lg {
-    grid-column: span 1;
     -ms-grid-column-span: 1;
+    grid-column: span 1;
     display: initial; }
   .span-2-lg {
-    grid-column: span 2;
     -ms-grid-column-span: 2;
+    grid-column: span 2;
     display: initial; }
   .span-3-lg {
-    grid-column: span 3;
     -ms-grid-column-span: 3;
+    grid-column: span 3;
     display: initial; }
   .span-4-lg {
-    grid-column: span 4;
     -ms-grid-column-span: 4;
+    grid-column: span 4;
     display: initial; }
   .span-5-lg {
-    grid-column: span 5;
     -ms-grid-column-span: 5;
+    grid-column: span 5;
     display: initial; }
   .span-6-lg {
-    grid-column: span 6;
     -ms-grid-column-span: 6;
+    grid-column: span 6;
     display: initial; }
   .span-7-lg {
-    grid-column: span 7;
     -ms-grid-column-span: 7;
+    grid-column: span 7;
     display: initial; }
   .span-8-lg {
-    grid-column: span 8;
     -ms-grid-column-span: 8;
+    grid-column: span 8;
     display: initial; }
   .span-9-lg {
-    grid-column: span 9;
     -ms-grid-column-span: 9;
+    grid-column: span 9;
     display: initial; }
   .span-10-lg {
-    grid-column: span 10;
     -ms-grid-column-span: 10;
+    grid-column: span 10;
     display: initial; }
   .span-11-lg {
-    grid-column: span 11;
     -ms-grid-column-span: 11;
+    grid-column: span 11;
     display: initial; }
   .span-12-lg {
-    grid-column: span 12;
     -ms-grid-column-span: 12;
+    grid-column: span 12;
     display: initial; } }
 
 html {
