@@ -29,7 +29,8 @@ function runTest(conditions) {
 
     window.getComputedStyle = jest.fn((el) => ({
         display: el.display,
-        msGridColumnSpan: el.colSpan
+        msGridColumnSpan: el.colSpan,
+        msGridRowSpan: el.rowSpan,
     }));
     polyfill();
 
@@ -108,4 +109,22 @@ describe('polyfill', () => {
         ];
         runTest(allDefaults);
     });
+
+    it('should not place elements over rowSpaned elements', () => {
+        const allDefaults = [
+            [new GridElement({ colSpan: 4, rowSpan: 2 }), { colStart: 1, rowStart: 1 }],
+            [new GridElement({ colSpan: 4 }),             { colStart: 5, rowStart: 1 }],
+            [new GridElement({ colSpan: 6 }),             { colStart: 5, rowStart: 2 }],
+            [new GridElement({ colSpan: 4 }),             { colStart: 1, rowStart: 3 }],
+        ];
+        runTest(allDefaults);
+
+        const largeArea = [
+            [new GridElement({ colSpan: 2 }),              { colStart: 1, rowStart: 1 }],
+            [new GridElement({ colSpan: 10, rowSpan: 5 }), { colStart: 3, rowStart: 1 }],
+            [new GridElement({ colSpan: 4 }),              { colStart: 1, rowStart: 6 }]
+        ];
+        runTest(largeArea);
+    });
+
 });
