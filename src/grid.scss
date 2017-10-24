@@ -13,13 +13,6 @@ $grid-end: 12;
   }
 }
 
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: repeat(12, 1fr);
-}
-
 /* 
  creates a .ms-col-1 { -ms-grid-column: 1 }
  from 1 to 12
@@ -110,4 +103,11 @@ $grid-end: 12;
       display: initial;
     }
   }
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
 }

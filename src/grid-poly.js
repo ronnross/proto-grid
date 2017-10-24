@@ -18,7 +18,7 @@ let polyfill = function() {
         rowSpanned[i].push({ start: xStart, end: xEnd });
       }
     }
-  
+
     function doesItFit(x, y, xSpan) {
       const toCheck = rowSpanned[y];
       for (let i = 0; i < (toCheck && toCheck.length) || 0; i++) {
@@ -45,7 +45,7 @@ let polyfill = function() {
 
       return [x, currRow];
     }
-  
+
     for (let i = 0; i < childArray.length; i++) {
       const gi = el.children[i];
       let s = window.getComputedStyle(gi);
@@ -60,7 +60,12 @@ let polyfill = function() {
       // forward lookup for row spanned elements
       if (rowSpan > 1) {
         // console.log('need to span rows ', rowStart, ' - ', rowStart + rowSpan - 1)
-        blockSquares(colStart, colStart + span - 1, rowStart, rowStart + rowSpan - 1);
+        blockSquares(
+          colStart,
+          colStart + span - 1,
+          rowStart,
+          rowStart + rowSpan - 1
+        );
       }
 
       // console.log({ span: span, colStart: colStart, rowStart: rowStart });
