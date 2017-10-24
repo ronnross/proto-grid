@@ -671,6 +671,8 @@ template {
   grid-row: span 12; }
 
 @supports (display: grid) {
+  .test-header {
+    color: blue; }
   .gap-1 {
     grid-gap: 15px; }
   .gap-2 {
@@ -681,6 +683,8 @@ template {
     grid-row-gap: 20px; } }
 
 @supports not (display: grid) {
+  .test-header {
+    color: red; }
   .gap-2 > * {
     margin-right: 20px;
     margin-bottom: 20px; }

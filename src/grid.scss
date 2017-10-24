@@ -58,6 +58,9 @@ $grid-end: 12;
 }
 
 @supports (display: grid) {
+  .test-header {
+    color: blue;
+  }
   .gap-1 {
     grid-gap: 15px;
   }
@@ -77,6 +80,9 @@ $grid-end: 12;
 
 @supports not (display: grid) {
   // code that will only run if CSS Grid is supported by the browser
+  .test-header {
+    color: red;
+  }
   .gap-2 > * {
     margin-right: 20px;
     margin-bottom: 20px;
