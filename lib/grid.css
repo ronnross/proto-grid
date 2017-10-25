@@ -449,10 +449,8 @@ template {
   display: none;
 }
 /************** Mixins *************/
-/* 
- creates a .ms-col-1 { -ms-grid-column: 1 }
- from 1 to 12
-*/
+/*//////// Mobile is the default breakpoint /////*/
+/* creates a .ms-row-n from 1 to 20 */
 .ms-row-1 {
   -ms-grid-row: 1; }
 
@@ -513,6 +511,7 @@ template {
 .ms-row-20 {
   -ms-grid-row: 20; }
 
+/* creates a .start-n from 1 to 12 */
 .start-1 {
   -ms-grid-column: 1;
   grid-column-start: 1; }
@@ -561,15 +560,10 @@ template {
   -ms-grid-column: 12;
   grid-column-start: 12; }
 
-/* sizes */
-/* Mobile */
 .span-0 {
   display: none; }
 
-/* 
- creates a .span-12 { grid-column: span 12 }
- from 1 to 12
-*/
+/* creates a .span-n from 1 to 12 */
 .span-1 {
   -ms-grid-column-span: 1;
   grid-column: span 1;
@@ -630,10 +624,7 @@ template {
   grid-column: span 12;
   display: initial; }
 
-/* 
- creates a row-span-2 { grid-row: span 2 }
- from 1 to 12
-*/
+/* creates a row-span-n from 1 to 12 */
 .row-span-1 {
   -ms-grid-column-span: 1;
   grid-row: span 1; }
@@ -682,31 +673,50 @@ template {
   -ms-grid-column-span: 12;
   grid-row: span 12; }
 
+/*/////////////// Things put in here are IE only ///////////////////*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .gap-1 {
+    margin-right: -5px;
+    margin-bottom: -5px; }
+  .gap-1 > * {
+    margin-right: 5px;
+    margin-bottom: 5px; }
   .gap-2 {
+    margin-right: -10px;
+    margin-bottom: -10px; }
+  .gap-2 > * {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .gap-3 {
+    margin-right: -15px;
+    margin-bottom: -15px; }
+  .gap-3 > * {
+    margin-right: 15px;
+    margin-bottom: 15px; }
+  .gap-4 {
     margin-right: -20px;
     margin-bottom: -20px; }
-  .gap-2 > * {
+  .gap-4 > * {
     margin-right: 20px;
     margin-bottom: 20px; }
-  .gap-col-2 {
-    margin-right: -20px; }
-  .gap-col-2 > * {
-    margin-right: 20px; }
-  .gap-row-2 {
-    margin-bottom: -20px; }
-  .gap-row-2 > * {
-    margin-bottom: 20px; } }
+  .gap-5 {
+    margin-right: -25px;
+    margin-bottom: -25px; }
+  .gap-5 > * {
+    margin-right: 25px;
+    margin-bottom: 25px; } }
 
 @supports (display: grid) {
   .gap-1 {
-    grid-gap: 15px; }
+    grid-gap: -5px; }
   .gap-2 {
-    grid-gap: 20px; }
-  .gap-col-2 {
-    grid-column-gap: 20px; }
-  .gap-row-2 {
-    grid-row-gap: 20px; } }
+    grid-gap: -10px; }
+  .gap-3 {
+    grid-gap: -15px; }
+  .gap-4 {
+    grid-gap: -20px; }
+  .gap-5 {
+    grid-gap: -25px; } }
 
 .row-span-0 {
   display: none; }

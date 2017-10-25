@@ -1,5 +1,6 @@
-$grid-start: 1;
-$grid-end: 12;
+$grid-begin-range: 1;
+$grid-end-range: 12;
+
 /************** Mixins *************/
 @mixin breakpoint($point) {
   @if $point == tablet {
@@ -12,35 +13,29 @@ $grid-end: 12;
     }
   }
 }
+/*//////// Mobile is the default breakpoint /////*/
 
-/* 
- creates a .ms-col-1 { -ms-grid-column: 1 }
- from 1 to 12
-*/
-
+/* creates a .ms-row-n from 1 to 20 */
 @for $i from 1 through 20 {
   .ms-row-#{$i} {
     -ms-grid-row: #{$i};
   }
 }
 
-@for $i from $grid-start through $grid-end {
+/* creates a .start-n from 1 to 12 */
+@for $i from $grid-begin-range through $grid-end-range {
   .start-#{$i} {
     -ms-grid-column: #{$i};
     grid-column-start: #{$i};
   }
 }
 
-/* sizes */
-/* Mobile */
 .span-0 {
   display: none;
 }
-/* 
- creates a .span-12 { grid-column: span 12 }
- from 1 to 12
-*/
-@for $i from $grid-start through $grid-end {
+
+/* creates a .span-n from 1 to 12 */
+@for $i from $grid-begin-range through $grid-end-range {
   .span-#{$i} {
     -ms-grid-column-span: #{$i};
     grid-column: span #{$i};
@@ -48,62 +43,43 @@ $grid-end: 12;
   }
 }
 
-/* 
- creates a row-span-2 { grid-row: span 2 }
- from 1 to 12
-*/
-@for $i from $grid-start through $grid-end {
+/* creates a row-span-n from 1 to 12 */
+@for $i from $grid-begin-range through $grid-end-range {
   .row-span-#{$i} {
     -ms-grid-column-span: #{$i};
     grid-row: span #{$i};
   }
 }
 
+/*/////////////// Things put in here are IE only ///////////////////*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  // ie only
-  .gap-2 {
-    margin-right: -20px;
-    margin-bottom: -20px;
-  }
+  /* creates a margin from 5 to 25 in multiples of 5 */
+  @for $i from 1 through 5 {
+    .gap-#{$i} {
+      margin-right: -#{$i * 5}px;
+      margin-bottom: -#{$i * 5}px;
+    }
 
-  .gap-2 > * {
-    margin-right: 20px;
-    margin-bottom: 20px;
+    .gap-#{$i} > * {
+      margin-right: #{$i * 5}px;
+      margin-bottom: #{$i * 5}px;
+    }
   }
-
-  .gap-col-2 {
-    margin-right: -20px;
-  }
-
-  .gap-col-2 > * {
-    margin-right: 20px;
-  }
-
-  .gap-row-2 {
-    margin-bottom: -20px;
-  }
-
-  .gap-row-2 > * {
-    margin-bottom: 20px;
-  }
-  // ie only
 }
 
 @supports (display: grid) {
-  .gap-1 {
-    grid-gap: 15px;
-  }
+  /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
+  @for $i from 1 through 5 {
+    .gap-#{$i} {
+      grid-gap: #{$i * 5}px;
+    }
+    .gap-col-#{$i} {
+      grid-column-gap: #{$i * 5}px;
+    }
 
-  .gap-2 {
-    grid-gap: 20px;
-  }
-
-  .gap-col-2 {
-    grid-column-gap: 20px;
-  }
-
-  .gap-row-2 {
-    grid-row-gap: 20px;
+    .gap-row-#{$i} {
+      grid-row-gap: #{$i * 5}px;
+    }
   }
 }
 
@@ -120,7 +96,7 @@ $grid-end: 12;
   Creates a .span-2-md { grid-column: span 2 }
   from 1 to 12
   */
-  @for $i from $grid-start through $grid-end {
+  @for $i from $grid-begin-range through $grid-end-range {
     .span-#{$i}-md {
       -ms-grid-column-span: #{$i};
       grid-column: span #{$i};
@@ -138,7 +114,7 @@ $grid-end: 12;
   Creates a .span-2-lg { grid-column: span 2 }
   from 1 to 12
   */
-  @for $i from $grid-start through $grid-end {
+  @for $i from $grid-begin-range through $grid-end-range {
     .span-#{$i}-lg {
       -ms-grid-column-span: #{$i};
       grid-column: span #{$i};
