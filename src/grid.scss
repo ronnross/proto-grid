@@ -17,15 +17,17 @@ $grid-end: 12;
  creates a .ms-col-1 { -ms-grid-column: 1 }
  from 1 to 12
 */
-@for $i from $grid-start through $grid-end {
-  .ms-col-#{$i} {
-    -ms-grid-column: #{$i};
-  }
-}
 
 @for $i from 1 through 20 {
   .ms-row-#{$i} {
     -ms-grid-row: #{$i};
+  }
+}
+
+@for $i from $grid-start through $grid-end {
+  .start-#{$i} {
+    -ms-grid-column: #{$i};
+    grid-column-start: #{$i};
   }
 }
 
@@ -59,10 +61,6 @@ $grid-end: 12;
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   // ie only
-  .test-header {
-    color: red;
-  }
-
   .gap-2 {
     margin-right: -20px;
     margin-bottom: -20px;
@@ -92,9 +90,6 @@ $grid-end: 12;
 }
 
 @supports (display: grid) {
-  .test-header {
-    color: blue;
-  }
   .gap-1 {
     grid-gap: 15px;
   }
