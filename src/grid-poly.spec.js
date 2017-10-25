@@ -41,7 +41,7 @@ function runTest(conditions) {
         try {
             // check column start
             if (ex.colStart) {
-                expect(el.classNames.includes(`ms-col-${ex.colStart}`)).toBeTruthy();
+                expect(el.classNames.includes(`start-${ex.colStart}`)).toBeTruthy();
             }
             // console.log('checking ', el.classNames, ' for ', `ms-row-${ex.rowStart}`)
             if (ex.rowStart) {
