@@ -11,7 +11,7 @@ $grid-end-range: 12;
 @for $i from $grid-begin-range through $grid-end-range {
   .span-#{$i} {
     -ms-grid-column-span: #{$i};
-    grid-column: span #{$i};
+    grid-column-end: span #{$i};
     display: initial;
   }
 }
