@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="layout.ico" />
+  <link rel="stylesheet" href="lib/grid.css">
+  <title>Grid</title>
+  <style>
+    body {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    hr {
+      margin-top: 50px;
+    }
+
+    .grid>* {
+      text-align: center;
+      border: solid 1px #d7d7d7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Basic grid</h1>
+  <p>If you have 12 children elements and you add the grid class they will fall in line</p>
+  <div class="example">
+    <div class="grid">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h1>First come, first serve</h1>
+  <p>Since the grid is 12 columns, if we have 6 items they will only have take up the first 6 columns.</p>
+  <div class="example">
+    <div class="grid">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h1>Spanning</h1>
+  <p>You can add a span-n to a child element to make it stretch</p>
+  <div class="example">
+    <div class="grid">
+      <div class="span-2">.span-2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-3">.span-3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-4">.span-4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-5">.span-5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-6">.span-6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-7">.span-7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-8">.span-8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-9">.span-9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-10">.span-10</div>
+      <div>11</div>
+      <div>12</div>
+      <div class="span-11">.span-11</div>
+      <div>12</div>
+      <div class="span-12">.span-12</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h1>Collapse column</h1>
+  <p>.start-n will start in the number column</p>
+  <p>starts go upto 12</p>
+  <div class="example">
+    <div class="grid">
+      <div class="start-4">Starting a col 4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+  </div>
+
+  <h1>Add an offset</h1>
+  <p>.start-3 will start in column 3</p>
+  <div class="example">
+    <div class="grid">
+      <div class="span-0"> collapsed</div>
+      <div>
+        <- column one is collapsed</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+          <div>11</div>
+          <div>12</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h1>What about rows</h1>
+    <p>We can have a row span two rows</p>
+    <div class="example">
+      <div class="grid">
+        <div class="span-11">span 11</div>
+        <div class="row-span-2">
+          .row-span-2 I now span two rows
+        </div>
+        <div class="span-11">span 11</div>
+      </div>
+    </div>
+
+    <p>Rows go upto 15. You can also collapse a row using .row-span-0</p>
+
+    <hr>
+
+    <h1>What about responsive?</h1>
+    <p>
+      default is mobile. You can add a -md/-lg modifier for medium large screens respectivly.
+    </p>
+    <div class="example">
+      <div class="grid">
+        <div class="span-6 span-9-md span-12-lg">
+          6 small / 9 medium / 12 large
+        </div>
+      </div>
+    </div>
+    <p>this works for all other classes like grid-gap and row-span</p>
+    <hr>
+
+
+
+
+</body>
+
+</html>
