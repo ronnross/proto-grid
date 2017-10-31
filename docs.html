@@ -29,6 +29,10 @@
       border-radius: 3px;
       padding: 20px;
     }
+
+    .gaps>* {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 
@@ -71,7 +75,7 @@
   <h1>Spanning</h1>
   <p>You can add a span-n to a child element to make it stretch</p>
   <div class="example">
-    <div class="grid">
+    <div class="grid gap-1">
       <div class="span-2">.span-2</div>
       <div>3</div>
       <div>4</div>
@@ -142,7 +146,83 @@
   </div>
 
 
-  <h1>Collapse column</h1>
+  <h1>Did you see that nice spacing between the cells above?</h1>
+  <p>You can use .gap-n to get that effect. Or .gap-col-n, .gap-row-n to have more granularity</p>
+  <p>Goes upto 5</p>
+  <div class="example gaps">
+    <div class="grid gap-1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <div class="grid gap-2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <div class="grid gap-3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <div class="grid gap-4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <div class="grid gap-5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+  </div>
+
+  <h1>Add an offset</h1>
   <p>.start-n will start in the number column</p>
   <p>starts go upto 12</p>
   <div class="example">
@@ -159,13 +239,13 @@
     </div>
   </div>
 
-  <h1>Add an offset</h1>
-  <p>.start-3 will start in column 3</p>
+  <h1>Collapse column</h1>
+  <p>.span-0 will collapse a column</p>
   <div class="example">
     <div class="grid">
       <div class="span-0"> collapsed</div>
       <div>
-        <- column one is collapsed</div>
+        <- column 1 is collapsed</div>
           <div>3</div>
           <div>4</div>
           <div>5</div>
@@ -185,11 +265,11 @@
     <p>We can have a row span two rows</p>
     <div class="example">
       <div class="grid">
-        <div class="span-11">span 11</div>
-        <div class="row-span-2">
-          .row-span-2 I now span two rows
+        <div class="span-8">span 11</div>
+        <div class="span-4 row-span-2">
+          span 4 row-span-2 I now span two rows
         </div>
-        <div class="span-11">span 11</div>
+        <div class="span-8">span 11</div>
       </div>
     </div>
 
@@ -199,7 +279,7 @@
 
     <h1>What about responsive?</h1>
     <p>
-      default is mobile. You can add a -md/-lg modifier for medium large screens respectivly.
+      default is mobile. You can add a -md/-lg modifier for medium/large screens respectivly.
     </p>
     <div class="example">
       <div class="grid">
@@ -209,10 +289,6 @@
       </div>
     </div>
     <p>this works for all other classes like grid-gap and row-span</p>
-
-
-
-
 
 </body>
 
