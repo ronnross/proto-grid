@@ -43,7 +43,7 @@ $sizes: (small: "", medium: "-md", large: "-lg");
 
       /* creates a row-span-n from 1 to 12 */
       .row-span-#{$i}#{$val} {
-        -ms-grid-column-span: #{$i};
+        -ms-grid-row-span: #{$i};
         grid-row: span #{$i};
       }
     }
