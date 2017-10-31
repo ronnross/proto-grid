@@ -449,199 +449,236 @@ template {
   display: none;
 }
 /************** Mixins *************/
-@media (min-width: 576px) {
-  .span-0 {
-    display: none; }
-  .row-span-0 {
-    display: none; }
-  /* creates a .span-n from 1 to 12 */
-  .span-1 {
-    -ms-grid-column-span: 1;
-    grid-column-end: span 1;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-1 {
-    -ms-grid-column: 1;
-    grid-column-start: 1; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-1 {
-    -ms-grid-column-span: 1;
-    grid-row: span 1; }
-  /* creates a .span-n from 1 to 12 */
-  .span-2 {
-    -ms-grid-column-span: 2;
-    grid-column-end: span 2;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-2 {
-    -ms-grid-column: 2;
-    grid-column-start: 2; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-2 {
-    -ms-grid-column-span: 2;
-    grid-row: span 2; }
-  /* creates a .span-n from 1 to 12 */
-  .span-3 {
-    -ms-grid-column-span: 3;
-    grid-column-end: span 3;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-3 {
-    -ms-grid-column: 3;
-    grid-column-start: 3; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-3 {
-    -ms-grid-column-span: 3;
-    grid-row: span 3; }
-  /* creates a .span-n from 1 to 12 */
-  .span-4 {
-    -ms-grid-column-span: 4;
-    grid-column-end: span 4;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-4 {
-    -ms-grid-column: 4;
-    grid-column-start: 4; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-4 {
-    -ms-grid-column-span: 4;
-    grid-row: span 4; }
-  /* creates a .span-n from 1 to 12 */
-  .span-5 {
-    -ms-grid-column-span: 5;
-    grid-column-end: span 5;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-5 {
-    -ms-grid-column: 5;
-    grid-column-start: 5; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-5 {
-    -ms-grid-column-span: 5;
-    grid-row: span 5; }
-  /* creates a .span-n from 1 to 12 */
-  .span-6 {
-    -ms-grid-column-span: 6;
-    grid-column-end: span 6;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-6 {
-    -ms-grid-column: 6;
-    grid-column-start: 6; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-6 {
-    -ms-grid-column-span: 6;
-    grid-row: span 6; }
-  /* creates a .span-n from 1 to 12 */
-  .span-7 {
-    -ms-grid-column-span: 7;
-    grid-column-end: span 7;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-7 {
-    -ms-grid-column: 7;
-    grid-column-start: 7; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-7 {
-    -ms-grid-column-span: 7;
-    grid-row: span 7; }
-  /* creates a .span-n from 1 to 12 */
-  .span-8 {
-    -ms-grid-column-span: 8;
-    grid-column-end: span 8;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-8 {
-    -ms-grid-column: 8;
-    grid-column-start: 8; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-8 {
-    -ms-grid-column-span: 8;
-    grid-row: span 8; }
-  /* creates a .span-n from 1 to 12 */
-  .span-9 {
-    -ms-grid-column-span: 9;
-    grid-column-end: span 9;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-9 {
-    -ms-grid-column: 9;
-    grid-column-start: 9; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-9 {
-    -ms-grid-column-span: 9;
-    grid-row: span 9; }
-  /* creates a .span-n from 1 to 12 */
-  .span-10 {
-    -ms-grid-column-span: 10;
-    grid-column-end: span 10;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-10 {
-    -ms-grid-column: 10;
-    grid-column-start: 10; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-10 {
-    -ms-grid-column-span: 10;
-    grid-row: span 10; }
-  /* creates a .span-n from 1 to 12 */
-  .span-11 {
-    -ms-grid-column-span: 11;
-    grid-column-end: span 11;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-11 {
-    -ms-grid-column: 11;
-    grid-column-start: 11; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-11 {
-    -ms-grid-column-span: 11;
-    grid-row: span 11; }
-  /* creates a .span-n from 1 to 12 */
-  .span-12 {
-    -ms-grid-column-span: 12;
-    grid-column-end: span 12;
-    display: initial; }
-  /* creates a .start-n from 1 to 12 */
-  .start-12 {
-    -ms-grid-column: 12;
-    grid-column-start: 12; }
-  /* creates a row-span-n from 1 to 12 */
-  .row-span-12 {
-    -ms-grid-column-span: 12;
-    grid-row: span 12; }
-  @supports (display: grid) {
-    /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
-    .gap-1 {
-      grid-gap: 5px; }
-    .gap-col-1 {
-      grid-column-gap: 5px; }
-    .gap-row-1 {
-      grid-row-gap: 5px; }
-    .gap-2 {
-      grid-gap: 10px; }
-    .gap-col-2 {
-      grid-column-gap: 10px; }
-    .gap-row-2 {
-      grid-row-gap: 10px; }
-    .gap-3 {
-      grid-gap: 15px; }
-    .gap-col-3 {
-      grid-column-gap: 15px; }
-    .gap-row-3 {
-      grid-row-gap: 15px; }
-    .gap-4 {
-      grid-gap: 20px; }
-    .gap-col-4 {
-      grid-column-gap: 20px; }
-    .gap-row-4 {
-      grid-row-gap: 20px; }
-    .gap-5 {
-      grid-gap: 25px; }
-    .gap-col-5 {
-      grid-column-gap: 25px; }
-    .gap-row-5 {
-      grid-row-gap: 25px; } } }
+.span-0 {
+  display: none; }
+
+.row-span-0 {
+  display: none; }
+
+/* creates a .span-n from 1 to 12 */
+.span-1 {
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-1 {
+  -ms-grid-column: 1;
+  grid-column-start: 1; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-1 {
+  -ms-grid-column-span: 1;
+  grid-row: span 1; }
+
+/* creates a .span-n from 1 to 12 */
+.span-2 {
+  -ms-grid-column-span: 2;
+  grid-column-end: span 2;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-2 {
+  -ms-grid-column: 2;
+  grid-column-start: 2; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-2 {
+  -ms-grid-column-span: 2;
+  grid-row: span 2; }
+
+/* creates a .span-n from 1 to 12 */
+.span-3 {
+  -ms-grid-column-span: 3;
+  grid-column-end: span 3;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-3 {
+  -ms-grid-column: 3;
+  grid-column-start: 3; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-3 {
+  -ms-grid-column-span: 3;
+  grid-row: span 3; }
+
+/* creates a .span-n from 1 to 12 */
+.span-4 {
+  -ms-grid-column-span: 4;
+  grid-column-end: span 4;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-4 {
+  -ms-grid-column: 4;
+  grid-column-start: 4; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-4 {
+  -ms-grid-column-span: 4;
+  grid-row: span 4; }
+
+/* creates a .span-n from 1 to 12 */
+.span-5 {
+  -ms-grid-column-span: 5;
+  grid-column-end: span 5;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-5 {
+  -ms-grid-column: 5;
+  grid-column-start: 5; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-5 {
+  -ms-grid-column-span: 5;
+  grid-row: span 5; }
+
+/* creates a .span-n from 1 to 12 */
+.span-6 {
+  -ms-grid-column-span: 6;
+  grid-column-end: span 6;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-6 {
+  -ms-grid-column: 6;
+  grid-column-start: 6; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-6 {
+  -ms-grid-column-span: 6;
+  grid-row: span 6; }
+
+/* creates a .span-n from 1 to 12 */
+.span-7 {
+  -ms-grid-column-span: 7;
+  grid-column-end: span 7;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-7 {
+  -ms-grid-column: 7;
+  grid-column-start: 7; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-7 {
+  -ms-grid-column-span: 7;
+  grid-row: span 7; }
+
+/* creates a .span-n from 1 to 12 */
+.span-8 {
+  -ms-grid-column-span: 8;
+  grid-column-end: span 8;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-8 {
+  -ms-grid-column: 8;
+  grid-column-start: 8; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-8 {
+  -ms-grid-column-span: 8;
+  grid-row: span 8; }
+
+/* creates a .span-n from 1 to 12 */
+.span-9 {
+  -ms-grid-column-span: 9;
+  grid-column-end: span 9;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-9 {
+  -ms-grid-column: 9;
+  grid-column-start: 9; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-9 {
+  -ms-grid-column-span: 9;
+  grid-row: span 9; }
+
+/* creates a .span-n from 1 to 12 */
+.span-10 {
+  -ms-grid-column-span: 10;
+  grid-column-end: span 10;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-10 {
+  -ms-grid-column: 10;
+  grid-column-start: 10; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-10 {
+  -ms-grid-column-span: 10;
+  grid-row: span 10; }
+
+/* creates a .span-n from 1 to 12 */
+.span-11 {
+  -ms-grid-column-span: 11;
+  grid-column-end: span 11;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-11 {
+  -ms-grid-column: 11;
+  grid-column-start: 11; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-11 {
+  -ms-grid-column-span: 11;
+  grid-row: span 11; }
+
+/* creates a .span-n from 1 to 12 */
+.span-12 {
+  -ms-grid-column-span: 12;
+  grid-column-end: span 12;
+  display: initial; }
+
+/* creates a .start-n from 1 to 12 */
+.start-12 {
+  -ms-grid-column: 12;
+  grid-column-start: 12; }
+
+/* creates a row-span-n from 1 to 12 */
+.row-span-12 {
+  -ms-grid-column-span: 12;
+  grid-row: span 12; }
+
+@supports (display: grid) {
+  /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
+  .gap-1 {
+    grid-gap: 5px; }
+  .gap-col-1 {
+    grid-column-gap: 5px; }
+  .gap-row-1 {
+    grid-row-gap: 5px; }
+  .gap-2 {
+    grid-gap: 10px; }
+  .gap-col-2 {
+    grid-column-gap: 10px; }
+  .gap-row-2 {
+    grid-row-gap: 10px; }
+  .gap-3 {
+    grid-gap: 15px; }
+  .gap-col-3 {
+    grid-column-gap: 15px; }
+  .gap-row-3 {
+    grid-row-gap: 15px; }
+  .gap-4 {
+    grid-gap: 20px; }
+  .gap-col-4 {
+    grid-column-gap: 20px; }
+  .gap-row-4 {
+    grid-row-gap: 20px; }
+  .gap-5 {
+    grid-gap: 25px; }
+  .gap-col-5 {
+    grid-column-gap: 25px; }
+  .gap-row-5 {
+    grid-row-gap: 25px; } }
 
 /*/////////////// Things put in here are IE only ///////////////////*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

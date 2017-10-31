@@ -5,9 +5,7 @@ $sizes: (small: "", medium: "-md", large: "-lg");
 /************** Mixins *************/
 @mixin breakpoint($point) {
   @if $point == small {
-    @media (min-width: 576px) {
-      @content;
-    }
+    @content;
   } @else if $point == medium {
     @media (min-width: 768px) {
       @content;
