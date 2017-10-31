@@ -1,109 +1,204 @@
 $grid-begin-range: 1;
 $grid-end-range: 12;
+$sizes: (small: "", medium: "-md", large: "-lg");
 
-/*//////// Mobile is the default breakpoint /////*/
-
-.span-0 {
-  display: none;
-}
-
-/* creates a .span-n from 1 to 12 */
-@for $i from $grid-begin-range through $grid-end-range {
-  .span-#{$i} {
-    -ms-grid-column-span: #{$i};
-    grid-column-end: span #{$i};
-    display: initial;
-  }
-}
-
-/* creates a .start-n from 1 to 12 */
-@for $i from $grid-begin-range through $grid-end-range {
-  .start-#{$i} {
-    -ms-grid-column: #{$i};
-    grid-column-start: #{$i};
-  }
-}
-
-.row-span-0 {
-  display: none;
-}
-
-/* creates a row-span-n from 1 to 12 */
-@for $i from $grid-begin-range through $grid-end-range {
-  .row-span-#{$i} {
-    -ms-grid-column-span: #{$i};
-    grid-row: span #{$i};
-  }
-}
-
-@supports (display: grid) {
-  /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
-  @for $i from 1 through 5 {
-    .gap-#{$i} {
-      grid-gap: #{$i * 5}px;
+/************** Mixins *************/
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 576px) {
+      @content;
     }
-    .gap-col-#{$i} {
-      grid-column-gap: #{$i * 5}px;
+  } @else if $point == medium {
+    @media (min-width: 768px) {
+      @content;
     }
-
-    .gap-row-#{$i} {
-      grid-row-gap: #{$i * 5}px;
+  } @else if $point == large {
+    @media (min-width: 992px) {
+      @content;
     }
   }
 }
 
-/*/////////////// Things put in here are IE only ///////////////////*/
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  /* creates a margin from 5 to 25 in multiples of 5 */
-  @for $i from 1 through 5 {
-    .gap-#{$i} {
-      margin-right: -#{$i * 5}px;
-      margin-bottom: -#{$i * 5}px;
+@each $key, $val in $sizes {
+  @include breakpoint($key) {
+    .span-0 {
+      display: none;
     }
 
-    .gap-#{$i} > * {
-      margin-right: #{$i * 5}px;
-      margin-bottom: #{$i * 5}px;
+    /* creates a .span-n from 1 to 12 */
+    @for $i from $grid-begin-range through $grid-end-range {
+      .span-#{$i}#{$val} {
+        -ms-grid-column-span: #{$i};
+        grid-column-end: span #{$i};
+        display: initial;
+      }
+    }
+
+    /* creates a .start-n from 1 to 12 */
+    @for $i from $grid-begin-range through $grid-end-range {
+      .start-#{$i}#{$val} {
+        -ms-grid-column: #{$i};
+        grid-column-start: #{$i};
+      }
+    }
+
+    .row-span-0 {
+      display: none;
+    }
+
+    /* creates a row-span-n from 1 to 12 */
+    @for $i from $grid-begin-range through $grid-end-range {
+      .row-span-#{$i}#{$val} {
+        -ms-grid-column-span: #{$i};
+        grid-row: span #{$i};
+      }
+    }
+
+    @supports (display: grid) {
+      /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
+      @for $i from 1 through 5 {
+        .gap-#{$i}#{$val} {
+          grid-gap: #{$i * 5}px;
+        }
+        .gap-col-#{$i}#{$val} {
+          grid-column-gap: #{$i * 5}px;
+        }
+
+        .gap-row-#{$i}#{$val} {
+          grid-row-gap: #{$i * 5}px;
+        }
+      }
+    }
+  }
+
+  /*/////////////// Things put in here are IE only ///////////////////*/
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* creates a margin from 5 to 25 in multiples of 5 */
+    @for $i from 1 through 5 {
+      .gap-#{$i}#{$val} {
+        margin-right: -#{$i * 5}px;
+        margin-bottom: -#{$i * 5}px;
+      }
+
+      .gap-#{$i}#{$val} > * {
+        margin-right: #{$i * 5}px;
+        margin-bottom: #{$i * 5}px;
+      }
+    }
+  }
+
+  /* .ms-row-n from 1 to 20 */
+  @for $i from 1 through 20 {
+    .ms-row-#{$i}#{$val} {
+      -ms-grid-row: #{$i};
     }
   }
 }
 
-/* .ms-row-n from 1 to 20 */
-@for $i from 1 through 20 {
-  .ms-row-#{$i} {
-    -ms-grid-row: #{$i};
-  }
-}
+/*//////// Mobile / default breakpoint /////*/
 
-/*//////// Tablet /////*/
-@media (min-width: 50rem) {
-  .span-0-md {
-    display: none;
-  }
-  /* Creates a .span-n-md from 1 to 12 */
-  @for $i from $grid-begin-range through $grid-end-range {
-    .span-#{$i}-md {
-      -ms-grid-column-span: #{$i};
-      grid-column: span #{$i};
-      display: initial;
-    }
-  }
-}
+// .span-0 {
+//   display: none;
+// }
 
-/*//////// Desktop /////*/
-@media (min-width: 70rem) {
-  .span-0-lg {
-    display: none;
-  }
-  /* Creates a .span-n-lg from 1 to 12 */
-  @for $i from $grid-begin-range through $grid-end-range {
-    .span-#{$i}-lg {
-      -ms-grid-column-span: #{$i};
-      grid-column: span #{$i};
-      display: initial;
-    }
-  }
-}
+// /* creates a .span-n from 1 to 12 */
+// @for $i from $grid-begin-range through $grid-end-range {
+//   .span-#{$i} {
+//     -ms-grid-column-span: #{$i};
+//     grid-column-end: span #{$i};
+//     display: initial;
+//   }
+// }
+
+// /* creates a .start-n from 1 to 12 */
+// @for $i from $grid-begin-range through $grid-end-range {
+//   .start-#{$i} {
+//     -ms-grid-column: #{$i};
+//     grid-column-start: #{$i};
+//   }
+// }
+
+// .row-span-0 {
+//   display: none;
+// }
+
+// /* creates a row-span-n from 1 to 12 */
+// @for $i from $grid-begin-range through $grid-end-range {
+//   .row-span-#{$i} {
+//     -ms-grid-column-span: #{$i};
+//     grid-row: span #{$i};
+//   }
+// }
+
+// @supports (display: grid) {
+//   /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
+//   @for $i from 1 through 5 {
+//     .gap-#{$i} {
+//       grid-gap: #{$i * 5}px;
+//     }
+//     .gap-col-#{$i} {
+//       grid-column-gap: #{$i * 5}px;
+//     }
+
+//     .gap-row-#{$i} {
+//       grid-row-gap: #{$i * 5}px;
+//     }
+//   }
+// }
+
+// /*/////////////// Things put in here are IE only ///////////////////*/
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//   /* creates a margin from 5 to 25 in multiples of 5 */
+//   @for $i from 1 through 5 {
+//     .gap-#{$i} {
+//       margin-right: -#{$i * 5}px;
+//       margin-bottom: -#{$i * 5}px;
+//     }
+
+//     .gap-#{$i} > * {
+//       margin-right: #{$i * 5}px;
+//       margin-bottom: #{$i * 5}px;
+//     }
+//   }
+// }
+
+// /* .ms-row-n from 1 to 20 */
+// @for $i from 1 through 20 {
+//   .ms-row-#{$i} {
+//     -ms-grid-row: #{$i};
+//   }
+// }
+
+// /*//////// Tablet /////*/
+// @media (min-width: 50rem) {
+//   .span-0-md {
+//     display: none;
+//   }
+//   /* Creates a .span-n-md from 1 to 12 */
+//   @for $i from $grid-begin-range through $grid-end-range {
+//     .span-#{$i}-md {
+//       -ms-grid-column-span: #{$i};
+//       grid-column: span #{$i};
+//       display: initial;
+//     }
+//   }
+// }
+
+// /*//////// Desktop /////*/
+// @media (min-width: 70rem) {
+//   .span-0-lg {
+//     display: none;
+//   }
+
+//   /* Creates a .span-n-lg from 1 to 12 */
+//   @for $i from $grid-begin-range through $grid-end-range {
+//     .span-#{$i}-lg {
+//       -ms-grid-column-span: #{$i};
+//       grid-column: span #{$i};
+//       display: initial;
+//     }
+//   }
+// }
 
 .grid {
   display: -ms-grid;

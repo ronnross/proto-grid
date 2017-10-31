@@ -448,204 +448,167 @@ template {
 [hidden] {
   display: none;
 }
-/*//////// Mobile is the default breakpoint /////*/
-.span-0 {
-  display: none; }
-
-/* creates a .span-n from 1 to 12 */
-.span-1 {
-  -ms-grid-column-span: 1;
-  grid-column-end: span 1;
-  display: initial; }
-
-.span-2 {
-  -ms-grid-column-span: 2;
-  grid-column-end: span 2;
-  display: initial; }
-
-.span-3 {
-  -ms-grid-column-span: 3;
-  grid-column-end: span 3;
-  display: initial; }
-
-.span-4 {
-  -ms-grid-column-span: 4;
-  grid-column-end: span 4;
-  display: initial; }
-
-.span-5 {
-  -ms-grid-column-span: 5;
-  grid-column-end: span 5;
-  display: initial; }
-
-.span-6 {
-  -ms-grid-column-span: 6;
-  grid-column-end: span 6;
-  display: initial; }
-
-.span-7 {
-  -ms-grid-column-span: 7;
-  grid-column-end: span 7;
-  display: initial; }
-
-.span-8 {
-  -ms-grid-column-span: 8;
-  grid-column-end: span 8;
-  display: initial; }
-
-.span-9 {
-  -ms-grid-column-span: 9;
-  grid-column-end: span 9;
-  display: initial; }
-
-.span-10 {
-  -ms-grid-column-span: 10;
-  grid-column-end: span 10;
-  display: initial; }
-
-.span-11 {
-  -ms-grid-column-span: 11;
-  grid-column-end: span 11;
-  display: initial; }
-
-.span-12 {
-  -ms-grid-column-span: 12;
-  grid-column-end: span 12;
-  display: initial; }
-
-/* creates a .start-n from 1 to 12 */
-.start-1 {
-  -ms-grid-column: 1;
-  grid-column-start: 1; }
-
-.start-2 {
-  -ms-grid-column: 2;
-  grid-column-start: 2; }
-
-.start-3 {
-  -ms-grid-column: 3;
-  grid-column-start: 3; }
-
-.start-4 {
-  -ms-grid-column: 4;
-  grid-column-start: 4; }
-
-.start-5 {
-  -ms-grid-column: 5;
-  grid-column-start: 5; }
-
-.start-6 {
-  -ms-grid-column: 6;
-  grid-column-start: 6; }
-
-.start-7 {
-  -ms-grid-column: 7;
-  grid-column-start: 7; }
-
-.start-8 {
-  -ms-grid-column: 8;
-  grid-column-start: 8; }
-
-.start-9 {
-  -ms-grid-column: 9;
-  grid-column-start: 9; }
-
-.start-10 {
-  -ms-grid-column: 10;
-  grid-column-start: 10; }
-
-.start-11 {
-  -ms-grid-column: 11;
-  grid-column-start: 11; }
-
-.start-12 {
-  -ms-grid-column: 12;
-  grid-column-start: 12; }
-
-.row-span-0 {
-  display: none; }
-
-/* creates a row-span-n from 1 to 12 */
-.row-span-1 {
-  -ms-grid-column-span: 1;
-  grid-row: span 1; }
-
-.row-span-2 {
-  -ms-grid-column-span: 2;
-  grid-row: span 2; }
-
-.row-span-3 {
-  -ms-grid-column-span: 3;
-  grid-row: span 3; }
-
-.row-span-4 {
-  -ms-grid-column-span: 4;
-  grid-row: span 4; }
-
-.row-span-5 {
-  -ms-grid-column-span: 5;
-  grid-row: span 5; }
-
-.row-span-6 {
-  -ms-grid-column-span: 6;
-  grid-row: span 6; }
-
-.row-span-7 {
-  -ms-grid-column-span: 7;
-  grid-row: span 7; }
-
-.row-span-8 {
-  -ms-grid-column-span: 8;
-  grid-row: span 8; }
-
-.row-span-9 {
-  -ms-grid-column-span: 9;
-  grid-row: span 9; }
-
-.row-span-10 {
-  -ms-grid-column-span: 10;
-  grid-row: span 10; }
-
-.row-span-11 {
-  -ms-grid-column-span: 11;
-  grid-row: span 11; }
-
-.row-span-12 {
-  -ms-grid-column-span: 12;
-  grid-row: span 12; }
-
-@supports (display: grid) {
-  /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
-  .gap-1 {
-    grid-gap: 5px; }
-  .gap-col-1 {
-    grid-column-gap: 5px; }
-  .gap-row-1 {
-    grid-row-gap: 5px; }
-  .gap-2 {
-    grid-gap: 10px; }
-  .gap-col-2 {
-    grid-column-gap: 10px; }
-  .gap-row-2 {
-    grid-row-gap: 10px; }
-  .gap-3 {
-    grid-gap: 15px; }
-  .gap-col-3 {
-    grid-column-gap: 15px; }
-  .gap-row-3 {
-    grid-row-gap: 15px; }
-  .gap-4 {
-    grid-gap: 20px; }
-  .gap-col-4 {
-    grid-column-gap: 20px; }
-  .gap-row-4 {
-    grid-row-gap: 20px; }
-  .gap-5 {
-    grid-gap: 25px; }
-  .gap-col-5 {
-    grid-column-gap: 25px; }
-  .gap-row-5 {
-    grid-row-gap: 25px; } }
+/************** Mixins *************/
+@media (min-width: 576px) {
+  .span-0 {
+    display: none; }
+  /* creates a .span-n from 1 to 12 */
+  .span-1 {
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    display: initial; }
+  .span-2 {
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    display: initial; }
+  .span-3 {
+    -ms-grid-column-span: 3;
+    grid-column-end: span 3;
+    display: initial; }
+  .span-4 {
+    -ms-grid-column-span: 4;
+    grid-column-end: span 4;
+    display: initial; }
+  .span-5 {
+    -ms-grid-column-span: 5;
+    grid-column-end: span 5;
+    display: initial; }
+  .span-6 {
+    -ms-grid-column-span: 6;
+    grid-column-end: span 6;
+    display: initial; }
+  .span-7 {
+    -ms-grid-column-span: 7;
+    grid-column-end: span 7;
+    display: initial; }
+  .span-8 {
+    -ms-grid-column-span: 8;
+    grid-column-end: span 8;
+    display: initial; }
+  .span-9 {
+    -ms-grid-column-span: 9;
+    grid-column-end: span 9;
+    display: initial; }
+  .span-10 {
+    -ms-grid-column-span: 10;
+    grid-column-end: span 10;
+    display: initial; }
+  .span-11 {
+    -ms-grid-column-span: 11;
+    grid-column-end: span 11;
+    display: initial; }
+  .span-12 {
+    -ms-grid-column-span: 12;
+    grid-column-end: span 12;
+    display: initial; }
+  /* creates a .start-n from 1 to 12 */
+  .start-1 {
+    -ms-grid-column: 1;
+    grid-column-start: 1; }
+  .start-2 {
+    -ms-grid-column: 2;
+    grid-column-start: 2; }
+  .start-3 {
+    -ms-grid-column: 3;
+    grid-column-start: 3; }
+  .start-4 {
+    -ms-grid-column: 4;
+    grid-column-start: 4; }
+  .start-5 {
+    -ms-grid-column: 5;
+    grid-column-start: 5; }
+  .start-6 {
+    -ms-grid-column: 6;
+    grid-column-start: 6; }
+  .start-7 {
+    -ms-grid-column: 7;
+    grid-column-start: 7; }
+  .start-8 {
+    -ms-grid-column: 8;
+    grid-column-start: 8; }
+  .start-9 {
+    -ms-grid-column: 9;
+    grid-column-start: 9; }
+  .start-10 {
+    -ms-grid-column: 10;
+    grid-column-start: 10; }
+  .start-11 {
+    -ms-grid-column: 11;
+    grid-column-start: 11; }
+  .start-12 {
+    -ms-grid-column: 12;
+    grid-column-start: 12; }
+  .row-span-0 {
+    display: none; }
+  /* creates a row-span-n from 1 to 12 */
+  .row-span-1 {
+    -ms-grid-column-span: 1;
+    grid-row: span 1; }
+  .row-span-2 {
+    -ms-grid-column-span: 2;
+    grid-row: span 2; }
+  .row-span-3 {
+    -ms-grid-column-span: 3;
+    grid-row: span 3; }
+  .row-span-4 {
+    -ms-grid-column-span: 4;
+    grid-row: span 4; }
+  .row-span-5 {
+    -ms-grid-column-span: 5;
+    grid-row: span 5; }
+  .row-span-6 {
+    -ms-grid-column-span: 6;
+    grid-row: span 6; }
+  .row-span-7 {
+    -ms-grid-column-span: 7;
+    grid-row: span 7; }
+  .row-span-8 {
+    -ms-grid-column-span: 8;
+    grid-row: span 8; }
+  .row-span-9 {
+    -ms-grid-column-span: 9;
+    grid-row: span 9; }
+  .row-span-10 {
+    -ms-grid-column-span: 10;
+    grid-row: span 10; }
+  .row-span-11 {
+    -ms-grid-column-span: 11;
+    grid-row: span 11; }
+  .row-span-12 {
+    -ms-grid-column-span: 12;
+    grid-row: span 12; }
+  @supports (display: grid) {
+    /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
+    .gap-1 {
+      grid-gap: 5px; }
+    .gap-col-1 {
+      grid-column-gap: 5px; }
+    .gap-row-1 {
+      grid-row-gap: 5px; }
+    .gap-2 {
+      grid-gap: 10px; }
+    .gap-col-2 {
+      grid-column-gap: 10px; }
+    .gap-row-2 {
+      grid-row-gap: 10px; }
+    .gap-3 {
+      grid-gap: 15px; }
+    .gap-col-3 {
+      grid-column-gap: 15px; }
+    .gap-row-3 {
+      grid-row-gap: 15px; }
+    .gap-4 {
+      grid-gap: 20px; }
+    .gap-col-4 {
+      grid-column-gap: 20px; }
+    .gap-row-4 {
+      grid-row-gap: 20px; }
+    .gap-5 {
+      grid-gap: 25px; }
+    .gap-col-5 {
+      grid-column-gap: 25px; }
+    .gap-row-5 {
+      grid-row-gap: 25px; } } }
 
 /*/////////////// Things put in here are IE only ///////////////////*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -742,114 +705,519 @@ template {
 .ms-row-20 {
   -ms-grid-row: 20; }
 
-/*//////// Tablet /////*/
-@media (min-width: 50rem) {
-  .span-0-md {
+@media (min-width: 768px) {
+  .span-0 {
     display: none; }
-  /* Creates a .span-n-md from 1 to 12 */
+  /* creates a .span-n from 1 to 12 */
   .span-1-md {
     -ms-grid-column-span: 1;
-    grid-column: span 1;
+    grid-column-end: span 1;
     display: initial; }
   .span-2-md {
     -ms-grid-column-span: 2;
-    grid-column: span 2;
+    grid-column-end: span 2;
     display: initial; }
   .span-3-md {
     -ms-grid-column-span: 3;
-    grid-column: span 3;
+    grid-column-end: span 3;
     display: initial; }
   .span-4-md {
     -ms-grid-column-span: 4;
-    grid-column: span 4;
+    grid-column-end: span 4;
     display: initial; }
   .span-5-md {
     -ms-grid-column-span: 5;
-    grid-column: span 5;
+    grid-column-end: span 5;
     display: initial; }
   .span-6-md {
     -ms-grid-column-span: 6;
-    grid-column: span 6;
+    grid-column-end: span 6;
     display: initial; }
   .span-7-md {
     -ms-grid-column-span: 7;
-    grid-column: span 7;
+    grid-column-end: span 7;
     display: initial; }
   .span-8-md {
     -ms-grid-column-span: 8;
-    grid-column: span 8;
+    grid-column-end: span 8;
     display: initial; }
   .span-9-md {
     -ms-grid-column-span: 9;
-    grid-column: span 9;
+    grid-column-end: span 9;
     display: initial; }
   .span-10-md {
     -ms-grid-column-span: 10;
-    grid-column: span 10;
+    grid-column-end: span 10;
     display: initial; }
   .span-11-md {
     -ms-grid-column-span: 11;
-    grid-column: span 11;
+    grid-column-end: span 11;
     display: initial; }
   .span-12-md {
     -ms-grid-column-span: 12;
-    grid-column: span 12;
-    display: initial; } }
-
-/*//////// Desktop /////*/
-@media (min-width: 70rem) {
-  .span-0-lg {
+    grid-column-end: span 12;
+    display: initial; }
+  /* creates a .start-n from 1 to 12 */
+  .start-1-md {
+    -ms-grid-column: 1;
+    grid-column-start: 1; }
+  .start-2-md {
+    -ms-grid-column: 2;
+    grid-column-start: 2; }
+  .start-3-md {
+    -ms-grid-column: 3;
+    grid-column-start: 3; }
+  .start-4-md {
+    -ms-grid-column: 4;
+    grid-column-start: 4; }
+  .start-5-md {
+    -ms-grid-column: 5;
+    grid-column-start: 5; }
+  .start-6-md {
+    -ms-grid-column: 6;
+    grid-column-start: 6; }
+  .start-7-md {
+    -ms-grid-column: 7;
+    grid-column-start: 7; }
+  .start-8-md {
+    -ms-grid-column: 8;
+    grid-column-start: 8; }
+  .start-9-md {
+    -ms-grid-column: 9;
+    grid-column-start: 9; }
+  .start-10-md {
+    -ms-grid-column: 10;
+    grid-column-start: 10; }
+  .start-11-md {
+    -ms-grid-column: 11;
+    grid-column-start: 11; }
+  .start-12-md {
+    -ms-grid-column: 12;
+    grid-column-start: 12; }
+  .row-span-0 {
     display: none; }
-  /* Creates a .span-n-lg from 1 to 12 */
+  /* creates a row-span-n from 1 to 12 */
+  .row-span-1-md {
+    -ms-grid-column-span: 1;
+    grid-row: span 1; }
+  .row-span-2-md {
+    -ms-grid-column-span: 2;
+    grid-row: span 2; }
+  .row-span-3-md {
+    -ms-grid-column-span: 3;
+    grid-row: span 3; }
+  .row-span-4-md {
+    -ms-grid-column-span: 4;
+    grid-row: span 4; }
+  .row-span-5-md {
+    -ms-grid-column-span: 5;
+    grid-row: span 5; }
+  .row-span-6-md {
+    -ms-grid-column-span: 6;
+    grid-row: span 6; }
+  .row-span-7-md {
+    -ms-grid-column-span: 7;
+    grid-row: span 7; }
+  .row-span-8-md {
+    -ms-grid-column-span: 8;
+    grid-row: span 8; }
+  .row-span-9-md {
+    -ms-grid-column-span: 9;
+    grid-row: span 9; }
+  .row-span-10-md {
+    -ms-grid-column-span: 10;
+    grid-row: span 10; }
+  .row-span-11-md {
+    -ms-grid-column-span: 11;
+    grid-row: span 11; }
+  .row-span-12-md {
+    -ms-grid-column-span: 12;
+    grid-row: span 12; }
+  @supports (display: grid) {
+    /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
+    .gap-1-md {
+      grid-gap: 5px; }
+    .gap-col-1-md {
+      grid-column-gap: 5px; }
+    .gap-row-1-md {
+      grid-row-gap: 5px; }
+    .gap-2-md {
+      grid-gap: 10px; }
+    .gap-col-2-md {
+      grid-column-gap: 10px; }
+    .gap-row-2-md {
+      grid-row-gap: 10px; }
+    .gap-3-md {
+      grid-gap: 15px; }
+    .gap-col-3-md {
+      grid-column-gap: 15px; }
+    .gap-row-3-md {
+      grid-row-gap: 15px; }
+    .gap-4-md {
+      grid-gap: 20px; }
+    .gap-col-4-md {
+      grid-column-gap: 20px; }
+    .gap-row-4-md {
+      grid-row-gap: 20px; }
+    .gap-5-md {
+      grid-gap: 25px; }
+    .gap-col-5-md {
+      grid-column-gap: 25px; }
+    .gap-row-5-md {
+      grid-row-gap: 25px; } } }
+
+/*/////////////// Things put in here are IE only ///////////////////*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* creates a margin from 5 to 25 in multiples of 5 */
+  .gap-1-md {
+    margin-right: -5px;
+    margin-bottom: -5px; }
+  .gap-1-md > * {
+    margin-right: 5px;
+    margin-bottom: 5px; }
+  .gap-2-md {
+    margin-right: -10px;
+    margin-bottom: -10px; }
+  .gap-2-md > * {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .gap-3-md {
+    margin-right: -15px;
+    margin-bottom: -15px; }
+  .gap-3-md > * {
+    margin-right: 15px;
+    margin-bottom: 15px; }
+  .gap-4-md {
+    margin-right: -20px;
+    margin-bottom: -20px; }
+  .gap-4-md > * {
+    margin-right: 20px;
+    margin-bottom: 20px; }
+  .gap-5-md {
+    margin-right: -25px;
+    margin-bottom: -25px; }
+  .gap-5-md > * {
+    margin-right: 25px;
+    margin-bottom: 25px; } }
+
+/* .ms-row-n from 1 to 20 */
+.ms-row-1-md {
+  -ms-grid-row: 1; }
+
+.ms-row-2-md {
+  -ms-grid-row: 2; }
+
+.ms-row-3-md {
+  -ms-grid-row: 3; }
+
+.ms-row-4-md {
+  -ms-grid-row: 4; }
+
+.ms-row-5-md {
+  -ms-grid-row: 5; }
+
+.ms-row-6-md {
+  -ms-grid-row: 6; }
+
+.ms-row-7-md {
+  -ms-grid-row: 7; }
+
+.ms-row-8-md {
+  -ms-grid-row: 8; }
+
+.ms-row-9-md {
+  -ms-grid-row: 9; }
+
+.ms-row-10-md {
+  -ms-grid-row: 10; }
+
+.ms-row-11-md {
+  -ms-grid-row: 11; }
+
+.ms-row-12-md {
+  -ms-grid-row: 12; }
+
+.ms-row-13-md {
+  -ms-grid-row: 13; }
+
+.ms-row-14-md {
+  -ms-grid-row: 14; }
+
+.ms-row-15-md {
+  -ms-grid-row: 15; }
+
+.ms-row-16-md {
+  -ms-grid-row: 16; }
+
+.ms-row-17-md {
+  -ms-grid-row: 17; }
+
+.ms-row-18-md {
+  -ms-grid-row: 18; }
+
+.ms-row-19-md {
+  -ms-grid-row: 19; }
+
+.ms-row-20-md {
+  -ms-grid-row: 20; }
+
+@media (min-width: 992px) {
+  .span-0 {
+    display: none; }
+  /* creates a .span-n from 1 to 12 */
   .span-1-lg {
     -ms-grid-column-span: 1;
-    grid-column: span 1;
+    grid-column-end: span 1;
     display: initial; }
   .span-2-lg {
     -ms-grid-column-span: 2;
-    grid-column: span 2;
+    grid-column-end: span 2;
     display: initial; }
   .span-3-lg {
     -ms-grid-column-span: 3;
-    grid-column: span 3;
+    grid-column-end: span 3;
     display: initial; }
   .span-4-lg {
     -ms-grid-column-span: 4;
-    grid-column: span 4;
+    grid-column-end: span 4;
     display: initial; }
   .span-5-lg {
     -ms-grid-column-span: 5;
-    grid-column: span 5;
+    grid-column-end: span 5;
     display: initial; }
   .span-6-lg {
     -ms-grid-column-span: 6;
-    grid-column: span 6;
+    grid-column-end: span 6;
     display: initial; }
   .span-7-lg {
     -ms-grid-column-span: 7;
-    grid-column: span 7;
+    grid-column-end: span 7;
     display: initial; }
   .span-8-lg {
     -ms-grid-column-span: 8;
-    grid-column: span 8;
+    grid-column-end: span 8;
     display: initial; }
   .span-9-lg {
     -ms-grid-column-span: 9;
-    grid-column: span 9;
+    grid-column-end: span 9;
     display: initial; }
   .span-10-lg {
     -ms-grid-column-span: 10;
-    grid-column: span 10;
+    grid-column-end: span 10;
     display: initial; }
   .span-11-lg {
     -ms-grid-column-span: 11;
-    grid-column: span 11;
+    grid-column-end: span 11;
     display: initial; }
   .span-12-lg {
     -ms-grid-column-span: 12;
-    grid-column: span 12;
-    display: initial; } }
+    grid-column-end: span 12;
+    display: initial; }
+  /* creates a .start-n from 1 to 12 */
+  .start-1-lg {
+    -ms-grid-column: 1;
+    grid-column-start: 1; }
+  .start-2-lg {
+    -ms-grid-column: 2;
+    grid-column-start: 2; }
+  .start-3-lg {
+    -ms-grid-column: 3;
+    grid-column-start: 3; }
+  .start-4-lg {
+    -ms-grid-column: 4;
+    grid-column-start: 4; }
+  .start-5-lg {
+    -ms-grid-column: 5;
+    grid-column-start: 5; }
+  .start-6-lg {
+    -ms-grid-column: 6;
+    grid-column-start: 6; }
+  .start-7-lg {
+    -ms-grid-column: 7;
+    grid-column-start: 7; }
+  .start-8-lg {
+    -ms-grid-column: 8;
+    grid-column-start: 8; }
+  .start-9-lg {
+    -ms-grid-column: 9;
+    grid-column-start: 9; }
+  .start-10-lg {
+    -ms-grid-column: 10;
+    grid-column-start: 10; }
+  .start-11-lg {
+    -ms-grid-column: 11;
+    grid-column-start: 11; }
+  .start-12-lg {
+    -ms-grid-column: 12;
+    grid-column-start: 12; }
+  .row-span-0 {
+    display: none; }
+  /* creates a row-span-n from 1 to 12 */
+  .row-span-1-lg {
+    -ms-grid-column-span: 1;
+    grid-row: span 1; }
+  .row-span-2-lg {
+    -ms-grid-column-span: 2;
+    grid-row: span 2; }
+  .row-span-3-lg {
+    -ms-grid-column-span: 3;
+    grid-row: span 3; }
+  .row-span-4-lg {
+    -ms-grid-column-span: 4;
+    grid-row: span 4; }
+  .row-span-5-lg {
+    -ms-grid-column-span: 5;
+    grid-row: span 5; }
+  .row-span-6-lg {
+    -ms-grid-column-span: 6;
+    grid-row: span 6; }
+  .row-span-7-lg {
+    -ms-grid-column-span: 7;
+    grid-row: span 7; }
+  .row-span-8-lg {
+    -ms-grid-column-span: 8;
+    grid-row: span 8; }
+  .row-span-9-lg {
+    -ms-grid-column-span: 9;
+    grid-row: span 9; }
+  .row-span-10-lg {
+    -ms-grid-column-span: 10;
+    grid-row: span 10; }
+  .row-span-11-lg {
+    -ms-grid-column-span: 11;
+    grid-row: span 11; }
+  .row-span-12-lg {
+    -ms-grid-column-span: 12;
+    grid-row: span 12; }
+  @supports (display: grid) {
+    /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
+    .gap-1-lg {
+      grid-gap: 5px; }
+    .gap-col-1-lg {
+      grid-column-gap: 5px; }
+    .gap-row-1-lg {
+      grid-row-gap: 5px; }
+    .gap-2-lg {
+      grid-gap: 10px; }
+    .gap-col-2-lg {
+      grid-column-gap: 10px; }
+    .gap-row-2-lg {
+      grid-row-gap: 10px; }
+    .gap-3-lg {
+      grid-gap: 15px; }
+    .gap-col-3-lg {
+      grid-column-gap: 15px; }
+    .gap-row-3-lg {
+      grid-row-gap: 15px; }
+    .gap-4-lg {
+      grid-gap: 20px; }
+    .gap-col-4-lg {
+      grid-column-gap: 20px; }
+    .gap-row-4-lg {
+      grid-row-gap: 20px; }
+    .gap-5-lg {
+      grid-gap: 25px; }
+    .gap-col-5-lg {
+      grid-column-gap: 25px; }
+    .gap-row-5-lg {
+      grid-row-gap: 25px; } } }
 
+/*/////////////// Things put in here are IE only ///////////////////*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* creates a margin from 5 to 25 in multiples of 5 */
+  .gap-1-lg {
+    margin-right: -5px;
+    margin-bottom: -5px; }
+  .gap-1-lg > * {
+    margin-right: 5px;
+    margin-bottom: 5px; }
+  .gap-2-lg {
+    margin-right: -10px;
+    margin-bottom: -10px; }
+  .gap-2-lg > * {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .gap-3-lg {
+    margin-right: -15px;
+    margin-bottom: -15px; }
+  .gap-3-lg > * {
+    margin-right: 15px;
+    margin-bottom: 15px; }
+  .gap-4-lg {
+    margin-right: -20px;
+    margin-bottom: -20px; }
+  .gap-4-lg > * {
+    margin-right: 20px;
+    margin-bottom: 20px; }
+  .gap-5-lg {
+    margin-right: -25px;
+    margin-bottom: -25px; }
+  .gap-5-lg > * {
+    margin-right: 25px;
+    margin-bottom: 25px; } }
+
+/* .ms-row-n from 1 to 20 */
+.ms-row-1-lg {
+  -ms-grid-row: 1; }
+
+.ms-row-2-lg {
+  -ms-grid-row: 2; }
+
+.ms-row-3-lg {
+  -ms-grid-row: 3; }
+
+.ms-row-4-lg {
+  -ms-grid-row: 4; }
+
+.ms-row-5-lg {
+  -ms-grid-row: 5; }
+
+.ms-row-6-lg {
+  -ms-grid-row: 6; }
+
+.ms-row-7-lg {
+  -ms-grid-row: 7; }
+
+.ms-row-8-lg {
+  -ms-grid-row: 8; }
+
+.ms-row-9-lg {
+  -ms-grid-row: 9; }
+
+.ms-row-10-lg {
+  -ms-grid-row: 10; }
+
+.ms-row-11-lg {
+  -ms-grid-row: 11; }
+
+.ms-row-12-lg {
+  -ms-grid-row: 12; }
+
+.ms-row-13-lg {
+  -ms-grid-row: 13; }
+
+.ms-row-14-lg {
+  -ms-grid-row: 14; }
+
+.ms-row-15-lg {
+  -ms-grid-row: 15; }
+
+.ms-row-16-lg {
+  -ms-grid-row: 16; }
+
+.ms-row-17-lg {
+  -ms-grid-row: 17; }
+
+.ms-row-18-lg {
+  -ms-grid-row: 18; }
+
+.ms-row-19-lg {
+  -ms-grid-row: 19; }
+
+.ms-row-20-lg {
+  -ms-grid-row: 20; }
+
+/*//////// Mobile / default breakpoint /////*/
 .grid {
   display: -ms-grid;
   display: grid;
