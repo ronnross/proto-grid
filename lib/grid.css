@@ -468,7 +468,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-1 {
-  -ms-grid-row-span: 1;
+  -ms-grid-row-span: 2;
   grid-row: span 1; }
 
 /* creates a .span-n from 1 to 12 */
@@ -484,7 +484,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-2 {
-  -ms-grid-row-span: 2;
+  -ms-grid-row-span: 3;
   grid-row: span 2; }
 
 /* creates a .span-n from 1 to 12 */
@@ -500,7 +500,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-3 {
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 4;
   grid-row: span 3; }
 
 /* creates a .span-n from 1 to 12 */
@@ -516,7 +516,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-4 {
-  -ms-grid-row-span: 4;
+  -ms-grid-row-span: 5;
   grid-row: span 4; }
 
 /* creates a .span-n from 1 to 12 */
@@ -532,7 +532,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-5 {
-  -ms-grid-row-span: 5;
+  -ms-grid-row-span: 6;
   grid-row: span 5; }
 
 /* creates a .span-n from 1 to 12 */
@@ -548,7 +548,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-6 {
-  -ms-grid-row-span: 6;
+  -ms-grid-row-span: 7;
   grid-row: span 6; }
 
 /* creates a .span-n from 1 to 12 */
@@ -564,7 +564,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-7 {
-  -ms-grid-row-span: 7;
+  -ms-grid-row-span: 8;
   grid-row: span 7; }
 
 /* creates a .span-n from 1 to 12 */
@@ -580,7 +580,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-8 {
-  -ms-grid-row-span: 8;
+  -ms-grid-row-span: 9;
   grid-row: span 8; }
 
 /* creates a .span-n from 1 to 12 */
@@ -596,7 +596,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-9 {
-  -ms-grid-row-span: 9;
+  -ms-grid-row-span: 10;
   grid-row: span 9; }
 
 /* creates a .span-n from 1 to 12 */
@@ -612,7 +612,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-10 {
-  -ms-grid-row-span: 10;
+  -ms-grid-row-span: 11;
   grid-row: span 10; }
 
 /* creates a .span-n from 1 to 12 */
@@ -628,7 +628,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-11 {
-  -ms-grid-row-span: 11;
+  -ms-grid-row-span: 12;
   grid-row: span 11; }
 
 /* creates a .span-n from 1 to 12 */
@@ -644,7 +644,7 @@ template {
 
 /* creates a row-span-n from 1 to 12 */
 .row-span-12 {
-  -ms-grid-row-span: 12;
+  -ms-grid-row-span: 13;
   grid-row: span 12; }
 
 @supports (display: grid) {
@@ -791,7 +791,7 @@ template {
     grid-column-start: 1; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-1-md {
-    -ms-grid-row-span: 1;
+    -ms-grid-row-span: 2;
     grid-row: span 1; }
   /* creates a .span-n from 1 to 12 */
   .span-2-md {
@@ -804,7 +804,7 @@ template {
     grid-column-start: 2; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-2-md {
-    -ms-grid-row-span: 2;
+    -ms-grid-row-span: 3;
     grid-row: span 2; }
   /* creates a .span-n from 1 to 12 */
   .span-3-md {
@@ -817,7 +817,7 @@ template {
     grid-column-start: 3; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-3-md {
-    -ms-grid-row-span: 3;
+    -ms-grid-row-span: 4;
     grid-row: span 3; }
   /* creates a .span-n from 1 to 12 */
   .span-4-md {
@@ -830,7 +830,7 @@ template {
     grid-column-start: 4; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-4-md {
-    -ms-grid-row-span: 4;
+    -ms-grid-row-span: 5;
     grid-row: span 4; }
   /* creates a .span-n from 1 to 12 */
   .span-5-md {
@@ -843,7 +843,7 @@ template {
     grid-column-start: 5; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-5-md {
-    -ms-grid-row-span: 5;
+    -ms-grid-row-span: 6;
     grid-row: span 5; }
   /* creates a .span-n from 1 to 12 */
   .span-6-md {
@@ -856,7 +856,7 @@ template {
     grid-column-start: 6; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-6-md {
-    -ms-grid-row-span: 6;
+    -ms-grid-row-span: 7;
     grid-row: span 6; }
   /* creates a .span-n from 1 to 12 */
   .span-7-md {
@@ -869,7 +869,7 @@ template {
     grid-column-start: 7; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-7-md {
-    -ms-grid-row-span: 7;
+    -ms-grid-row-span: 8;
     grid-row: span 7; }
   /* creates a .span-n from 1 to 12 */
   .span-8-md {
@@ -882,7 +882,7 @@ template {
     grid-column-start: 8; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-8-md {
-    -ms-grid-row-span: 8;
+    -ms-grid-row-span: 9;
     grid-row: span 8; }
   /* creates a .span-n from 1 to 12 */
   .span-9-md {
@@ -895,7 +895,7 @@ template {
     grid-column-start: 9; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-9-md {
-    -ms-grid-row-span: 9;
+    -ms-grid-row-span: 10;
     grid-row: span 9; }
   /* creates a .span-n from 1 to 12 */
   .span-10-md {
@@ -908,7 +908,7 @@ template {
     grid-column-start: 10; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-10-md {
-    -ms-grid-row-span: 10;
+    -ms-grid-row-span: 11;
     grid-row: span 10; }
   /* creates a .span-n from 1 to 12 */
   .span-11-md {
@@ -921,7 +921,7 @@ template {
     grid-column-start: 11; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-11-md {
-    -ms-grid-row-span: 11;
+    -ms-grid-row-span: 12;
     grid-row: span 11; }
   /* creates a .span-n from 1 to 12 */
   .span-12-md {
@@ -934,7 +934,7 @@ template {
     grid-column-start: 12; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-12-md {
-    -ms-grid-row-span: 12;
+    -ms-grid-row-span: 13;
     grid-row: span 12; }
   @supports (display: grid) {
     /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
@@ -1080,7 +1080,7 @@ template {
     grid-column-start: 1; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-1-lg {
-    -ms-grid-row-span: 1;
+    -ms-grid-row-span: 2;
     grid-row: span 1; }
   /* creates a .span-n from 1 to 12 */
   .span-2-lg {
@@ -1093,7 +1093,7 @@ template {
     grid-column-start: 2; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-2-lg {
-    -ms-grid-row-span: 2;
+    -ms-grid-row-span: 3;
     grid-row: span 2; }
   /* creates a .span-n from 1 to 12 */
   .span-3-lg {
@@ -1106,7 +1106,7 @@ template {
     grid-column-start: 3; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-3-lg {
-    -ms-grid-row-span: 3;
+    -ms-grid-row-span: 4;
     grid-row: span 3; }
   /* creates a .span-n from 1 to 12 */
   .span-4-lg {
@@ -1119,7 +1119,7 @@ template {
     grid-column-start: 4; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-4-lg {
-    -ms-grid-row-span: 4;
+    -ms-grid-row-span: 5;
     grid-row: span 4; }
   /* creates a .span-n from 1 to 12 */
   .span-5-lg {
@@ -1132,7 +1132,7 @@ template {
     grid-column-start: 5; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-5-lg {
-    -ms-grid-row-span: 5;
+    -ms-grid-row-span: 6;
     grid-row: span 5; }
   /* creates a .span-n from 1 to 12 */
   .span-6-lg {
@@ -1145,7 +1145,7 @@ template {
     grid-column-start: 6; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-6-lg {
-    -ms-grid-row-span: 6;
+    -ms-grid-row-span: 7;
     grid-row: span 6; }
   /* creates a .span-n from 1 to 12 */
   .span-7-lg {
@@ -1158,7 +1158,7 @@ template {
     grid-column-start: 7; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-7-lg {
-    -ms-grid-row-span: 7;
+    -ms-grid-row-span: 8;
     grid-row: span 7; }
   /* creates a .span-n from 1 to 12 */
   .span-8-lg {
@@ -1171,7 +1171,7 @@ template {
     grid-column-start: 8; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-8-lg {
-    -ms-grid-row-span: 8;
+    -ms-grid-row-span: 9;
     grid-row: span 8; }
   /* creates a .span-n from 1 to 12 */
   .span-9-lg {
@@ -1184,7 +1184,7 @@ template {
     grid-column-start: 9; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-9-lg {
-    -ms-grid-row-span: 9;
+    -ms-grid-row-span: 10;
     grid-row: span 9; }
   /* creates a .span-n from 1 to 12 */
   .span-10-lg {
@@ -1197,7 +1197,7 @@ template {
     grid-column-start: 10; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-10-lg {
-    -ms-grid-row-span: 10;
+    -ms-grid-row-span: 11;
     grid-row: span 10; }
   /* creates a .span-n from 1 to 12 */
   .span-11-lg {
@@ -1210,7 +1210,7 @@ template {
     grid-column-start: 11; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-11-lg {
-    -ms-grid-row-span: 11;
+    -ms-grid-row-span: 12;
     grid-row: span 11; }
   /* creates a .span-n from 1 to 12 */
   .span-12-lg {
@@ -1223,7 +1223,7 @@ template {
     grid-column-start: 12; }
   /* creates a row-span-n from 1 to 12 */
   .row-span-12-lg {
-    -ms-grid-row-span: 12;
+    -ms-grid-row-span: 13;
     grid-row: span 12; }
   @supports (display: grid) {
     /* creates a gap-n, gap-col-n, and gap-row-n from 5 to 25 in multiples of 5 */
